@@ -16,8 +16,8 @@ from transformers import BertTokenizer
 from transformers import BertModel, BertPreTrainedModel, AdamW, BertConfig
 from transformers import get_linear_schedule_with_warmup
 
-from transformers import RobertaTokenizer
-from transformers import RobertaModel, RobertaPreTrainedModel
+from transformers import DistilBertTokenizer
+from transformers import DistilBertModel, DistilBertPreTrainedModel
 
 from torch.nn import CrossEntropyLoss
 
@@ -72,7 +72,7 @@ def make_bow_vector(ids, vocab_size, use_counts=False):
 
 
 
-class CausalBert(RobertaPreTrainedModel):
+class CausalBert(DistilBertPreTrainedModel):
     """The model itself."""
     def __init__(self, config):
         super().__init__(config)
@@ -80,21 +80,24 @@ class CausalBert(RobertaPreTrainedModel):
         self.num_labels = config.num_labels
         self.vocab_size = config.vocab_size
 
-        self.distilbert = RobertaModel(config)
+        self.distilbert = DistilBertModel(config)
         # self.dropout = nn.Dropout(config.hidden_dropout_prob)
-        self.vocab_transform = nn.Linear(config.hidden_size, config.hidden_size)
-        self.vocab_layer_norm = nn.LayerNorm(config.hidden_size, eps=1e-12)
-        self.vocab_projector = nn.Linear(config.hidden_size, config.vocab_size)
+        self.vocab_transform = nn.Linear(config.dim, config.dim)
+        self.vocab_layer_norm = nn.LayerNorm(config.dim, eps=1e-12)
+        self.vocab_projector = nn.Linear(config.dim, config.vocab_size)
 
         self.Q_cls = nn.ModuleDict()
 
         for T in range(2):
             # ModuleDict keys have to be strings..
             self.Q_cls['%d' % T] = nn.Sequential(
-                nn.Linear(config.hidden_size+ self.num_labels, 200),
+                nn.Linear(config.hidden_size + self.num_labels, 200),
                 nn.ReLU(),
                 nn.Linear(200, self.num_labels))
-            
+        
+        print("config",config.hidden_size + self.num_labels)
+        print(config)
+
         self.g_cls = nn.Linear(config.hidden_size + self.num_labels, 
             self.config.num_labels)
 
@@ -119,36 +122,34 @@ class CausalBert(RobertaPreTrainedModel):
         # pooled_output = self.dropout(pooled_output)
 
         if use_mlm:
-
             prediction_logits = self.vocab_transform(seq_output)  # (bs, seq_length, dim)
-            
             prediction_logits = gelu(prediction_logits)  # (bs, seq_length, dim)
-            
             prediction_logits = self.vocab_layer_norm(prediction_logits)  # (bs, seq_length, dim)
-            
             prediction_logits = self.vocab_projector(prediction_logits)  # (bs, seq_length, vocab_size)
             mlm_loss = CrossEntropyLoss()(
                 prediction_logits.view(-1, self.vocab_size), mlm_labels.view(-1))
-    
         else:
             mlm_loss = 0.0
 
         C_bow = make_bow_vector(C.unsqueeze(1), self.num_labels)
         inputs = torch.cat((pooled_output, C_bow), 1)
-    
+        
         # g logits
         g = self.g_cls(inputs)
+        print("g",g.shape,g)
+        
         if Y is not None:  # TODO train/test mode, this is a lil hacky
             g_loss = CrossEntropyLoss()(g.view(-1, self.num_labels), T.view(-1))
         else:
             g_loss = 0.0
-        
+
         # conditional expected outcome logits: 
         # run each example through its corresponding T matrix
         # TODO this would be cleaner with sigmoid and BCELoss, but less general 
         #   (and I couldn't get it to work as well)
         Q_logits_T0 = self.Q_cls['0'](inputs)
         Q_logits_T1 = self.Q_cls['1'](inputs)
+
         if Y is not None:
             T0_indices = (T == 0).nonzero().squeeze()
             Y_T1_labels = Y.clone().scatter(0, T0_indices, -100)
@@ -180,7 +181,7 @@ class CausalBertWrapper:
     def __init__(self, g_weight=1.0, Q_weight=0.1, mlm_weight=1.0,
         batch_size=32):
         self.model = CausalBert.from_pretrained(
-            "roberta-base",
+            "distilbert-base-uncased",
             num_labels=2,
             output_attentions=False,
             output_hidden_states=False)
@@ -275,8 +276,8 @@ class CausalBertWrapper:
             outcomes = [-1 for _ in range(len(treatments))]
 
         if tokenizer is None:
-            tokenizer = RobertaTokenizer.from_pretrained(
-                'roberta-base', do_lower_case=True)
+            tokenizer = DistilBertTokenizer.from_pretrained(
+                'distilbert-base-uncased', do_lower_case=True)
 
         out = defaultdict(list)
         for i, (W, C, T, Y) in enumerate(zip(texts, confounds, treatments, outcomes)):

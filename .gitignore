@@ -131,4 +131,6 @@ dmypy.json
 #pytorch-lightning
 lightning_logs
 
-.csvs
+.csv
+embeddings
+images

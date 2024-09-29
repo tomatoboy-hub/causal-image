@@ -31,7 +31,7 @@ def gelu(x):
     return 0.5 * x * (1.0 + torch.erf(x/math.sqrt(2.0)))
 
 class CausalImageModelWrapper:
-    def __init__(self, g_weight=1.0, Q_weight=0.1, mlm_weight=1.0, batch_size=32):
+    def __init__(self, g_weight=1.0, Q_weight=0.1, batch_size=32):
         self.model = ImageCausalModel(num_labels=2, pretrained_model_names="resnet50")
         if CUDA:
             self.model = self.model.cuda()

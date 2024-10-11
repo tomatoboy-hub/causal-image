@@ -5,12 +5,16 @@ import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
 import timm 
-import torch.optim as optim
+from torch.optim import AdamW
 from omegaconf import DictConfig
+
+from transformers import get_linear_schedule_with_warmup
+
 
 class ImageCausalModel(LightningModule):
     def __init__(self,cfg:DictConfig):
         super().__init__()
+        self.save_hyperparameters()
         self.cfg = cfg
 
         self.base_model = timm.create_model(
@@ -28,12 +32,14 @@ class ImageCausalModel(LightningModule):
             self.Q_cls['%d' % T] = nn.Sequential(
                 nn.Linear(input_size, 200),
                 nn.ReLU(),
-                nn.Linear(200, self.num_labels)
+                nn.Linear(200, self.cfg.num_labels)
             )
         self.g_cls = nn.Linear(input_size, self.cfg.num_labels)
 
         self.Q0s = []
         self.Q1s = []
+
+        self.total_training_steps = cfg.total_training_steps
 
     def init_weights(self):
         for m in self.modules():
@@ -101,8 +107,15 @@ class ImageCausalModel(LightningModule):
         g_prob = sm(g)[:,1]
 
         return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss
-        
-        
+    
+    def configure_optimizers(self):
+        optimizer = AdamW(self.parameters(), lr = self.cfg.learning_rate, eps = 1e-8)
+        scheduler = get_linear_schedule_with_warmup(
+            optimizer,
+            num_warmup_steps = int(0.1 * self.total_training_steps),
+            num_training_steps = self.total_training_steps
+        )
+        return [optimizer], [scheduler]
         
     def _make_confound_vector(self,ids, vocab_size, use_counts = False):
         vec = torch.zeros(ids.shape[0],vocab_size)

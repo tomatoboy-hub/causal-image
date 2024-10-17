@@ -20,7 +20,7 @@ class ImageCausalModel(LightningModule):
         self.base_model = timm.create_model(
             cfg.pretrained_model, 
             pretrained = cfg.pretrained,
-            num_classes = cfg.num_classes
+            num_classes = 0
             )
         self.base_model.fc = nn.Identity()
 
@@ -73,6 +73,29 @@ class ImageCausalModel(LightningModule):
         preds = np.argmax(probs,axis = 1)
 
         return probs,preds
+    
+    def predict_step(self,batch,batch_idx):
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
+        Q0s = Q_prob_T0.detach().cpu().numpy().tolist()
+        Q1s = Q_prob_T1.detach().cpu().numpy().tolist()
+        self.Q0s += Q0s
+        self.Q1s += Q1s
+        return {"Q0s": self.Q0s, "Q1s": self.Q1s}
+    
+    def on_predict_epoch_end(self):
+        print("on_predict_epoch_end")
+        probs = np.array(list(zip(self.Q0s, self.Q1s)))
+        preds = np.argmax(probs,axis = 1)
+        print("ATE", self.ATE(probs))
+        return {"probs": probs, "preds": preds}
+    
+    def ATE(self,probs):
+        ## [todo] ATEの計算方法
+        Q0 = probs[:,0]
+        Q1 = probs[:,1]
+        return np.mean(Q0 - Q1)
+
+
 
     
     def __share_step(self, batch, batch_idx):
@@ -81,22 +104,22 @@ class ImageCausalModel(LightningModule):
         C = self._make_confound_vector(confounds.unsqueeze(1), self.cfg.num_labels)
         inputs = torch.cat((features, C), dim = 1)
         g = self.g_cls(inputs)
-        if outcome is not None:
-            g_loss = CrossEntropyLoss()(g.view(-1, self.num_labels),treatment.view(-1))
+        if torch.all(outcome != -1):
+            g_loss = CrossEntropyLoss()(g.view(-1, self.cfg.num_labels),treatment.view(-1))
         else:
             g_loss = 0.0
 
         Q_logits_T0 = self.Q_cls['0'](inputs)
         Q_logits_T1 = self.Q_cls['1'](inputs)
 
-        if outcome is not None:
+        if torch.all(outcome != -1):
             T0_indices = (treatment == 0).nonzero().squeeze()
             Y_T1_labels = outcome.clone().scatter(0,T0_indices, -100)
 
             T1_indices = (treatment == 1).nonzero().squeeze()
             Y_T0_labels = outcome.clone().scatter(0,T1_indices, -100)
-            Q_loss_T1 = CrossEntropyLoss()(Q_logits_T1.view(-1,self.num_labels), Y_T1_labels)
-            Q_loss_T0 = CrossEntropyLoss()(Q_logits_T0.view(-1, self.num_labels), Y_T0_labels)
+            Q_loss_T1 = CrossEntropyLoss()(Q_logits_T1.view(-1,self.cfg.num_labels), Y_T1_labels)
+            Q_loss_T0 = CrossEntropyLoss()(Q_logits_T0.view(-1, self.cfg.num_labels), Y_T0_labels)
             Q_loss = Q_loss_T1 + Q_loss_T0
         else:
             Q_loss = 0.0

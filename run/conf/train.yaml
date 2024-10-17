@@ -1,4 +1,4 @@
-pretrained_model: timm/efficientvit_m2.r224_in1k
+pretrained_model: timm/eva02_small_patch14_224.mim_in22k
 pretrained: True
 num_classes: 2
 num_labels: 2
@@ -17,7 +17,7 @@ treatments_column: price_ave
 outcome_column: outcome
 
 batch_size: 2
-num_workers: 32
+num_workers: 4
 epoch: 3
 
 total_training_steps: ??? 

@@ -35,9 +35,10 @@ class ImageCausalModel(LightningModule):
                 nn.Linear(200, self.cfg.num_labels)
             )
         self.g_cls = nn.Linear(input_size, self.cfg.num_labels)
-
+        self.init_weights()
         self.Q0s = []
         self.Q1s = []
+        self.losses = []
 
         self.total_training_steps = cfg.total_training_steps
 
@@ -54,10 +55,18 @@ class ImageCausalModel(LightningModule):
     
     def training_step(self,batch,batch_idx):
         g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
-        loss = (self.cfg.loss_weights["g"] * g_loss + 
-                self.cfg.loss_weights["Q"] * Q_loss)
+        loss = (self.cfg.loss_weights.g * g_loss + 
+                self.cfg.loss_weights.Q * Q_loss)
+        self.log("g_loss", g_loss)
+        self.log("Q_loss", Q_loss)
         self.log("train_loss" , loss)
+        self.losses.append(loss)
         return loss
+    
+    def on_train_epoch_end(self):
+        self.log("train_epoch_loss", torch.stack(self.losses).mean())
+        self.losses.clear()
+        return 
     
     def validation_step(self,batch,batch_idx):
         g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
@@ -84,9 +93,13 @@ class ImageCausalModel(LightningModule):
     
     def on_predict_epoch_end(self):
         print("on_predict_epoch_end")
+        print(len(self.Q0s), len(self.Q1s))
         probs = np.array(list(zip(self.Q0s, self.Q1s)))
+        print("probs_shape",probs.shape)
         preds = np.argmax(probs,axis = 1)
-        print("ATE", self.ATE(probs))
+        ate_value = self.ATE(probs)
+        print("ATE", ate_value)
+        self.logger.experiment.log({"ATE": ate_value})
         return {"probs": probs, "preds": preds}
     
     def ATE(self,probs):
@@ -111,7 +124,6 @@ class ImageCausalModel(LightningModule):
 
         Q_logits_T0 = self.Q_cls['0'](inputs)
         Q_logits_T1 = self.Q_cls['1'](inputs)
-
         if torch.all(outcome != -1):
             T0_indices = (treatment == 0).nonzero().squeeze()
             Y_T1_labels = outcome.clone().scatter(0,T0_indices, -100)

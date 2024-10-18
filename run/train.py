@@ -9,12 +9,13 @@ import torch
 import hydra
 from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
+from src.utils.common import set_seed
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
-    print(cfg)
+
+    set_seed(cfg.seed)
     df = pd.read_csv("/root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv")
-    print(df.head())
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
 
     data_module = CausalImageDataModule(cfg,df)
@@ -31,7 +32,7 @@ def main(cfg:DictConfig):
 
     trainer = Trainer(
         logger = wandb_logger,
-        max_epochs = 1,
+        max_epochs = cfg.epoch,
         accelerator='gpu' if torch.cuda.is_available() else 'cpu',
         enable_progress_bar = True
     )
@@ -46,16 +47,9 @@ def main(cfg:DictConfig):
     """
     
     predictions = trainer.predict(model, dataloaders = data_module)
-    print(predictions)
     Q0 = predictions[-1]["Q0s"]
     Q1 = predictions[-1]["Q1s"]
-    def ATE(Q0, Q1):
-        print("Q0:", Q0, "Q1:", Q1)
-        return np.mean(Q0 - Q1)
-    
-    ate = ATE(Q0, Q1)
-    print("ATE:", ate)
-    wandb_logger.log_metrics({'ATE':ate})
+
 
 
 

@@ -34,7 +34,7 @@ class ImageCausalModel(LightningModule):
                 nn.ReLU(),
                 nn.Linear(200, self.cfg.num_labels)
             )
-        self.g_cls = nn.Linear(input_size, self.cfg.num_labels)
+        self.g_cls = nn.Linear(self.base_model.num_features + self.cfg.num_labels, self.cfg.num_labels)
         self.init_weights()
         self.Q0s = []
         self.Q1s = []
@@ -49,12 +49,12 @@ class ImageCausalModel(LightningModule):
                 if m.bias is not None:
                     nn.init.zeros_(m.bias)
     
-    def forward(self, images):
-        features = self.base_model(images)
-        return features
+    def forward(self, batch, batch_idx):
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
+        return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss
     
     def training_step(self,batch,batch_idx):
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
         loss = (self.cfg.loss_weights.g * g_loss + 
                 self.cfg.loss_weights.Q * Q_loss)
         self.log("g_loss", g_loss)
@@ -69,7 +69,7 @@ class ImageCausalModel(LightningModule):
         return 
     
     def validation_step(self,batch,batch_idx):
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
         self.Q0s += Q_prob_T0.detach().cpu().numpy().tolist()
         self.Q1s += Q_prob_T1.detach().cpu().numpy().tolist()
         loss = (self.cfg.loss_weights["g"] * g_loss + 
@@ -84,12 +84,12 @@ class ImageCausalModel(LightningModule):
         return probs,preds
     
     def predict_step(self,batch,batch_idx):
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
         Q0s = Q_prob_T0.detach().cpu().numpy().tolist()
         Q1s = Q_prob_T1.detach().cpu().numpy().tolist()
         self.Q0s += Q0s
         self.Q1s += Q1s
-        return {"Q0s": self.Q0s, "Q1s": self.Q1s}
+        return 
     
     def on_predict_epoch_end(self):
         print("on_predict_epoch_end")
@@ -113,7 +113,7 @@ class ImageCausalModel(LightningModule):
     
     def __share_step(self, batch, batch_idx):
         images, confounds, treatment,outcome = batch
-        features = self.forward(images)
+        features = self.base_model(images)
         C = self._make_confound_vector(confounds.unsqueeze(1), self.cfg.num_labels)
         inputs = torch.cat((features, C), dim = 1)
         g = self.g_cls(inputs)
@@ -132,6 +132,7 @@ class ImageCausalModel(LightningModule):
             Y_T0_labels = outcome.clone().scatter(0,T1_indices, -100)
             Q_loss_T1 = CrossEntropyLoss()(Q_logits_T1.view(-1,self.cfg.num_labels), Y_T1_labels)
             Q_loss_T0 = CrossEntropyLoss()(Q_logits_T0.view(-1, self.cfg.num_labels), Y_T0_labels)
+
             Q_loss = Q_loss_T1 + Q_loss_T0
         else:
             Q_loss = 0.0
@@ -140,6 +141,7 @@ class ImageCausalModel(LightningModule):
         Q_prob_T0 = sm(Q_logits_T0)[:,1]
         Q_prob_T1 = sm(Q_logits_T1)[:,1]
         g_prob = sm(g)[:,1]
+    
 
         return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss
     

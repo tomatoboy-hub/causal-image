@@ -88,9 +88,9 @@ class CausalImageDataModule(LightningDataModule):
         return valid_loader
     """ 
     def predict_dataloader(self):
-        sampler = SequentialSampler(self.predict_dataset)
+        sampler = SequentialSampler(self.train_dataset)
         predict_loader = DataLoader(
-            self.predict_dataset,
+            self.train_dataset,
             batch_size = self.cfg.batch_size,
             sampler = sampler,
             num_workers= self.cfg.num_workers

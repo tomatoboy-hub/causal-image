@@ -16,9 +16,9 @@ confounds_column: light_or_dark
 treatments_column: price_ave
 outcome_column: outcome
 
-batch_size: 2
+batch_size: 32
 num_workers: 4
-epoch: 1
+epoch: 32
 seed: 42
 
 total_training_steps: ??? 

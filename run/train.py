@@ -25,6 +25,7 @@ def main(cfg:DictConfig):
     cfg.total_training_steps = total_training_steps
 
     model = ImageCausalModel(cfg)
+    
     wandb_logger = WandbLogger(project='causal_image',
                                name = f'{cfg.pretrained_model}-{cfg.batch_size}-{cfg.epoch}', 
                                save_dir='logs')
@@ -45,8 +46,9 @@ def main(cfg:DictConfig):
         enable_progress_bar = True
     )
     """
+
     
-    predictions = trainer.predict(model, dataloaders = data_module)
+    predictions = trainer.predict(model, dataloaders = data_module.predict_dataloader())
     Q0 = predictions[-1]["Q0s"]
     Q1 = predictions[-1]["Q1s"]
 

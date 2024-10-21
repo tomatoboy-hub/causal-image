@@ -1,4 +1,5 @@
-pretrained_model: timm/eva02_tiny_patch14_224.mim_in22k
+exp_id: ${exp_id}
+pretrained_model: ${pretrained_model}
 pretrained: True
 num_classes: 2
 num_labels: 2
@@ -16,9 +17,9 @@ confounds_column: light_or_dark
 treatments_column: price_ave
 outcome_column: outcome
 
-batch_size: 32
-num_workers: 4
-epoch: 32
+batch_size: ${batch_size}
+num_workers: 0
+epoch: ${epoch}
 seed: 42
 
 total_training_steps: ??? 

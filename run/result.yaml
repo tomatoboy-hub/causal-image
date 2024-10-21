@@ -1,0 +1,5 @@
+exp1:
+  ATE: 0.06378498926783571
+  batch_size: 2
+  epochs: 10
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k

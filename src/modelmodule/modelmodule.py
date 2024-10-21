@@ -160,7 +160,7 @@ class ImageCausalModel(LightningModule):
             num_warmup_steps = 0.1 * self.total_training_steps,
             num_training_steps = self.total_training_steps
         )
-        return [optimizer], [scheduler]
+        return [optimizer],[{"scheduler": scheduler, "interval": "step", "frequency": 1}]
         
     def _make_confound_vector(self,ids, vocab_size, use_counts = False):
         vec = torch.zeros(ids.shape[0],vocab_size)

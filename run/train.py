@@ -64,7 +64,7 @@ def main(cfg:DictConfig):
         model_name=cfg.pretrained_model,
         batch_size=cfg.batch_size,
         epochs=cfg.epoch,
-        ATE=ATE_value
+        ATE=float(ATE_value)
     )
 
 

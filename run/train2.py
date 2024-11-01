@@ -10,6 +10,7 @@ import hydra
 from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
 from src.utils.common import set_seed, save_experiment_result
+from sklearn.model_selection import train_test_split
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
@@ -17,8 +18,19 @@ def main(cfg:DictConfig):
     set_seed(cfg.seed)
     df = pd.read_csv("/root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv")
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
+
+    # データの分割
+    train_df, temp_df = train_test_split(df, test_size=0.3, random_state=cfg.seed)
+    val_df, test_df = train_test_split(temp_df, test_size=0.5, random_state=cfg.seed)
+    # インデックスのリセット
+    train_df = train_df.reset_index(drop=True)
+    val_df = val_df.reset_index(drop=True)
+    test_df = test_df.reset_index(drop=True)
     
-    data_module = CausalImageDataModule(cfg,df)
+    # データモジュールの作成
+    data_module = CausalImageDataModule(cfg, train_df, val_df, test_df)
+    data_module.setup(stage = "fit")
+
     train_dataset_size = len(data_module.train_dataset)
     steps_per_epoch = train_dataset_size // cfg.batch_size
     total_training_steps = steps_per_epoch * cfg.epoch
@@ -39,14 +51,9 @@ def main(cfg:DictConfig):
     )
 
     trainer.fit(model, data_module)
-    """
-    trainer = Trainer(
-        max_epochs = 1,
-        accelerator='gpu' if torch.cuda.is_available() else 'cpu',
-        enable_progress_bar = True
-    )
-    """
     
+    data_module.setup("test")
+
         # トレーニング後に保存
     #trainer.save_checkpoint("best_model.ckpt")
 

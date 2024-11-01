@@ -12,10 +12,11 @@ learning_rate: 2e-5
 
 #
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv
-image_column: img_path
-confounds_column: light_or_dark
-treatments_column: price_ave
-outcome_column: outcome
+image_column: "img_path"
+confounds_column: "light_or_dark"
+treatments_column: "price_ave"
+outcome_column: "outcome"
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result_epoch3_batch32_apliance2.yaml
 
 batch_size: ${batch_size}
 num_workers: 31

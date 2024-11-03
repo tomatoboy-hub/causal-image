@@ -13,7 +13,7 @@ from src.utils.common import set_seed, save_experiment_result
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
-
+    print("done")
     set_seed(cfg.seed)
     df = pd.read_csv("/root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv")
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
@@ -64,6 +64,7 @@ def main(cfg:DictConfig):
         model_name=cfg.pretrained_model,
         batch_size=cfg.batch_size,
         epochs=cfg.epoch,
+        seed=cfg.seed,
         ATE=float(ATE_value)
     )
 

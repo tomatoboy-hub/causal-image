@@ -1,0 +1,85 @@
+exp1:
+  ATE: -0.2503894506825874
+  batch_size: 2
+  epochs: 1
+  model_name: Distilbert
+exp10:
+  ATE: -0.21518644355454083
+  batch_size: 32
+  epochs: 10
+  model_name: Distilbert
+exp11:
+  ATE: -0.27883015922011356
+  batch_size: 32
+  epochs: 20
+  model_name: Distilbert
+exp12:
+  ATE: -0.355029875827258
+  batch_size: 32
+  epochs: 32
+  model_name: Distilbert
+exp13:
+  ATE: -0.2378082543583996
+  batch_size: 64
+  epochs: 1
+  model_name: Distilbert
+exp14:
+  ATE: -0.21529191619370583
+  batch_size: 64
+  epochs: 10
+  model_name: Distilbert
+exp15:
+  ATE: -0.2292872780494403
+  batch_size: 64
+  epochs: 20
+  model_name: Distilbert
+exp16:
+  ATE: -0.2896450573762383
+  batch_size: 64
+  epochs: 32
+  model_name: Distilbert
+exp17:
+  ATE: -0.24174414183117543
+  batch_size: 32
+  epochs: 3
+  model_name: Distilbert
+exp2:
+  ATE: -0.30517025981552864
+  batch_size: 2
+  epochs: 10
+  model_name: Distilbert
+exp3:
+  ATE: -0.32567725649011114
+  batch_size: 2
+  epochs: 20
+  model_name: Distilbert
+exp4:
+  ATE: -0.34218188959434814
+  batch_size: 2
+  epochs: 32
+  model_name: Distilbert
+exp5:
+  ATE: -0.2581760792999639
+  batch_size: 10
+  epochs: 1
+  model_name: Distilbert
+exp6:
+  ATE: -0.2685383912846944
+  batch_size: 10
+  epochs: 10
+  model_name: Distilbert
+exp7:
+  ATE: -0.3402294438158838
+  batch_size: 10
+  epochs: 20
+  model_name: Distilbert
+exp8:
+  ATE: -0.46497970183812587
+  batch_size: 10
+  epochs: 32
+  model_name: Distilbert
+exp9:
+  ATE: -0.2274942072728325
+  batch_size: 32
+  epochs: 1
+  model_name: Distilbert

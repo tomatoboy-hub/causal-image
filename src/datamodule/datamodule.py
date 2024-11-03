@@ -4,8 +4,12 @@ from PIL import Image
 from pytorch_lightning import LightningDataModule
 from omegaconf import DictConfig
 import pandas as pd
+import numpy as np
+import albumentations as A
+from albumentations.pytorch import transforms as AT
 class CausalImageDataset(Dataset):
     def __init__(self,cfg,df):
+        self.cfg = cfg
         self.image_paths = df[cfg.image_column]
         self.confounds = df[cfg.confounds_column]
         self.treatments = df[cfg.treatments_column]
@@ -17,14 +21,44 @@ class CausalImageDataset(Dataset):
                 transforms.Normalize(mean=[0.485, 0.456, 0.406] , std = [0.229, 0.224, 0.225])
             ]
         )
-    
+        if cfg.augmentation:
+            self.transform = A.Compose([
+                A.RandomBrightnessContrast(brightness_limit=(-0.2, 0.2), contrast_limit=(-0.2, 0.2), p=0.5),
+                A.OneOf([
+                    A.MotionBlur(blur_limit=5),
+                    A.MedianBlur(blur_limit=5),
+                    A.GaussianBlur(blur_limit=5),
+                    A.GaussNoise(var_limit=(5.0, 30.0)),
+                ], p=0.5),
+
+                A.OneOf([
+                    A.OpticalDistortion(distort_limit=1.0),
+                    A.GridDistortion(num_steps=5, distort_limit=1.),
+                    A.ElasticTransform(alpha=3),
+                ], p=0.5),
+
+                A.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=15, border_mode=0, p=0.5),
+                A.Resize(224, 224),
+                A.CoarseDropout(max_holes=16, max_height=64, max_width=64, min_holes=1, min_height=8, min_width=8, p=0.5),    
+                A.Normalize(mean=0.5, std=0.5),
+                AT.ToTensorV2()
+            ])
+        
     def __len__(self):
         return len(self.image_paths)
     
     def __getitem__(self,idx):
         image_path = self.image_paths[idx]
         image = Image.open(image_path).convert('RGB')
-        image = self.transform(image)
+        if self.cfg.augmentation:
+            # PIL ImageをNumPy配列に変換
+            image = np.array(image)
+            # Albumentationsの変換を適用（キーワード引数で渡す）
+            transformed = self.transform(image=image)
+            image = transformed['image']
+        else:
+            # torchvision.transformsの変換を適用
+            image = self.transform(image)
         
         confounds = self.confounds[idx]
         treatment = self.treatments[idx] if self.treatments is not None else -1

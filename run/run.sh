@@ -18,7 +18,7 @@ for model in "${pretrained_models[@]}"; do
         for epoch in "${epochs[@]}"; do
 
             # Hydraの設定をオーバーライドして実行
-            python train2.py \
+            python train.py \
                 pretrained_model=$model \
                 batch_size=$batch_size \
                 epoch=$epoch \

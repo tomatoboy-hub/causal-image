@@ -16,12 +16,12 @@ image_column: "img_path"
 confounds_column: "light_or_dark"
 treatments_column: "price_ave"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/apliance_augmentation_with_albu.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything.yaml
 
 batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
-seed: 42
-augmentation: True
+seed: ${seed}
+augmentation: False
 
 total_training_steps: ??? 

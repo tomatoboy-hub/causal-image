@@ -3,12 +3,21 @@ import numpy as np
 from pytorch_lightning import LightningModule
 import torch
 import torch.nn as nn
+import torch.nn.functional as F 
 from torch.nn import CrossEntropyLoss
 import timm 
 from torch.optim import AdamW
 from omegaconf import DictConfig
 
 from transformers import get_linear_schedule_with_warmup
+
+def random_mask(features, mask_ratio=0.15):
+    """
+    画像特徴量に対するランダムマスクを生成
+    """
+    mask = torch.rand(features.size()) < mask_ratio
+    mask = mask.float()
+    return mask
 
 
 class ImageCausalModel(LightningModule):
@@ -40,6 +49,7 @@ class ImageCausalModel(LightningModule):
         self.Q1s = []
         self.g_losses = []
         self.Q_losses = []
+        self.mask_losses = []
         self.losses = []
         self.total_training_steps = cfg.total_training_steps
 
@@ -51,30 +61,44 @@ class ImageCausalModel(LightningModule):
                     nn.init.zeros_(m.bias)
     
     def forward(self, batch, batch_idx):
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.__share_step(batch, batch_idx)
-        return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss ,masking_loss = self.__share_step(batch, batch_idx)
+        return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss, masking_loss
     
     def training_step(self,batch,batch_idx):
         self.train()
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
-        loss = (self.cfg.loss_weights.g * g_loss + self.cfg.loss_weights.Q * Q_loss)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss, masking_loss  = self.forward(batch, batch_idx)
+        loss = (self.cfg.loss_weights.g * g_loss + 
+                self.cfg.loss_weights.Q * Q_loss + 
+                self.cfg.loss_weights.masking * masking_loss)
+        
         self.g_losses.append(g_loss)
         self.Q_losses.append(Q_loss)
-        self.log("g_loss", g_loss)
-        self.log("Q_loss", Q_loss)
-        self.log("train_loss" , loss)
+        self.mask_losses.append(masking_loss)
+        self.log({"g_loss": g_loss, 
+                  "Q_loss": Q_loss, 
+                  "masking_loss": masking_loss, 
+                  "train_loss": loss}
+                )
         self.losses.append(loss)
 
         return loss
     
     def on_train_epoch_end(self):
-        self.log("train_epoch_loss", torch.stack(self.losses).mean())
-        self.log("g_losses", torch.stack(self.g_losses).mean())
-        self.log("Q_losses", torch.stack(self.Q_losses).mean())
-        print(len(self.losses))
+        avg_g_loss = torch.stack(self.g_losses).mean()
+        avg_Q_loss = torch.stack(self.Q_losses).mean()
+        avg_masking_loss = torch.stack(self.mask_losses).mean()
+        avg_loss = torch.stack(self.losses).mean()
+
+        self.log_dict({
+            "train_epoch_loss": avg_loss,
+            "g_losses": avg_g_loss,
+            "Q_losses": avg_Q_loss,
+            "masking_losses": avg_masking_loss
+        })
         self.losses.clear()
         self.g_losses.clear()
         self.Q_losses.clear()
+        self.mask_losses.clear()
         return 
     """
     def validation_step(self,batch,batch_idx):
@@ -94,7 +118,7 @@ class ImageCausalModel(LightningModule):
     """
     def predict_step(self,batch,batch_idx):
         self.eval()
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss,mask_loss = self.forward(batch, batch_idx)
         Q0s = Q_prob_T0.detach().cpu().numpy().tolist()
         Q1s = Q_prob_T1.detach().cpu().numpy().tolist()
         self.Q0s += Q0s
@@ -145,13 +169,22 @@ class ImageCausalModel(LightningModule):
         else:
             Q_loss = 0.0
 
+        if self.cfg.use_mask_loss:
+            mask = random_mask(features)
+            masked_features = features * (1 - mask)
+            reconstructed_features = self.base_model(masked_features)
+            masking_loss = F.mse_loss(reconstructed_features, features)
+        else:
+            masking_loss = 0.0
+
+
         sm = torch.nn.Softmax(dim = 1)
         Q_prob_T0 = sm(Q_logits_T0)[:,1]
         Q_prob_T1 = sm(Q_logits_T1)[:,1]
         g_prob = sm(g)[:,1]
     
 
-        return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss
+        return g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss,masking_loss
     
     def configure_optimizers(self):
         optimizer = AdamW(self.parameters(), lr = self.cfg.learning_rate, eps = 1e-8)

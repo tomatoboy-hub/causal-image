@@ -17,13 +17,13 @@ image_column: "img_path"
 confounds_column: "light_or_dark"
 treatments_column: "price_ave"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_with_albuaug.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_with_mask_loss.yaml
 
 batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
 seed: ${seed}
-augmentation: True
-use_mask_loss: False
+augmentation: False
+use_mask_loss: True
 
 total_training_steps: ??? 

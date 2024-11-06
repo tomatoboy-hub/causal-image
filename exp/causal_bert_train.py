@@ -315,9 +315,10 @@ def set_seed(seed: int):
         torch.backends.cudnn.benchmark = False
 
 
-def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs, ATE):
+def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs, ATE,seed):
     new_entry = {
         exp_name: {
+            "seed": seed,
             "model_name": model_name,
             "batch_size": batch_size,
             "epochs": epochs,
@@ -345,6 +346,7 @@ def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs, 
 @hydra.main(config_path = "config", config_name = "config", version_base='1.1')
 def main(cfg:DictConfig):
     df = pd.read_csv("/root/graduation_thetis/causal-bert-pytorch/testdata.csv")
+    set_seed(cfg.seed)
     batch_size = cfg.batch_size
     epochs = cfg.epoch
 
@@ -354,12 +356,13 @@ def main(cfg:DictConfig):
     cb.train(df['text'], df['C'], df['T'], df['Y'], epochs=epochs)
     ATE_value = cb.ATE(df['C'], df.text, platt_scaling=True)
     save_experiment_result(
-        file_path="/root/graduation_thetis/causal-bert-pytorch/exp/bert_result.yaml",
+        file_path="/root/graduation_thetis/causal-bert-pytorch/exp/bert_result_multi_seeds.yaml",
         exp_name=f'exp{cfg.exp_id}',
         model_name='Distilbert',
         batch_size=cfg.batch_size,
         epochs=cfg.epoch,
-        ATE=float(ATE_value)
+        ATE=float(ATE_value),
+        seed = cfg.seed
     )
 
 

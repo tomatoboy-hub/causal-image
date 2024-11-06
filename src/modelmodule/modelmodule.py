@@ -68,13 +68,15 @@ class ImageCausalModel(LightningModule):
         self.train()
         g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss, masking_loss  = self.forward(batch, batch_idx)
         loss = (self.cfg.loss_weights.g * g_loss + 
-                self.cfg.loss_weights.Q * Q_loss + 
-                self.cfg.loss_weights.masking * masking_loss)
+            self.cfg.loss_weights.Q * Q_loss + 
+            (self.cfg.loss_weights.masking * masking_loss if self.cfg.use_mask_loss else 0.0))
         
         self.g_losses.append(g_loss)
         self.Q_losses.append(Q_loss)
-        self.mask_losses.append(masking_loss)
-        self.log({"g_loss": g_loss, 
+        if self.cfg.use_mask_loss:
+            self.mask_losses.append(masking_loss)
+        
+        self.log_dict({"g_loss": g_loss, 
                   "Q_loss": Q_loss, 
                   "masking_loss": masking_loss, 
                   "train_loss": loss}
@@ -86,7 +88,7 @@ class ImageCausalModel(LightningModule):
     def on_train_epoch_end(self):
         avg_g_loss = torch.stack(self.g_losses).mean()
         avg_Q_loss = torch.stack(self.Q_losses).mean()
-        avg_masking_loss = torch.stack(self.mask_losses).mean()
+        avg_masking_loss = torch.stack(self.mask_losses).mean() if self.mask_losses else 0.0
         avg_loss = torch.stack(self.losses).mean()
 
         self.log_dict({
@@ -171,6 +173,7 @@ class ImageCausalModel(LightningModule):
 
         if self.cfg.use_mask_loss:
             mask = random_mask(features)
+            mask = mask.to(features.device)
             masked_features = features * (1 - mask)
             reconstructed_features = self.base_model(masked_features)
             masking_loss = F.mse_loss(reconstructed_features, features)

@@ -2,14 +2,11 @@ import sys
 sys.path.append("../../")
 sys.path.append("../../../")
 
-import os
 from PIL import Image
 from torchvision import transforms
 import pandas as pd
-import torch
-import timm
-import pickle
 import numpy as np
+import cv2
 
 def preprocessing(input_df):
     """
@@ -35,9 +32,9 @@ def preprocessing(input_df):
         output = output.dropna(subset=["img_path"])
         return output
     
-    output = price2yen(input_df)
-    output = no_of_rate(output)
-    output = img_path(output)
+    #output = price2yen(input_df)
+    #output = no_of_rate(output)
+    output = img_path(input_df)
     return output
 
 def filter_outlier(output_df):
@@ -55,10 +52,23 @@ def filter_outlier(output_df):
     return filtered_df
 
 def make_treatment(filtered_df):
+    def calculate_sharpness(img_path):
+        # 画像をグレースケールで読み込む
+        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+
+        # ラプラシアンフィルタを適用して勾配を計算
+        laplacian = cv2.Laplacian(img, cv2.CV_64F)
+
+        # ラプラシアンの分散をシャープネスとして使用
+        sharpness = np.var(laplacian)
+
+        return sharpness
+    filtered_df["sharpness"] = filtered_df["img_path"].apply(calculate_sharpness)
     # "actual_price_yen"の平均を計算
-    mean_price = filtered_df["actual_price_yen"].mean()
+    mean_edge = filtered_df["sharpness"].mean()
+    print(mean_edge)
     # "price_ave"列を追加
-    filtered_df["price_ave"] = filtered_df["actual_price_yen"].apply(lambda x: 1 if x > mean_price else 0)
+    filtered_df["sharpness_ave"] = filtered_df["sharpness"].apply(lambda x: 1 if x > mean_edge else 0)
     return filtered_df
 
 def make_confounder(df):
@@ -85,10 +95,10 @@ def make_confounder(df):
     return df
 
 if __name__ == "__main__":
-    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/watch_img.csv"
+    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/backlog/csv/All Appliances_preprocess.csv"
     df = pd.read_csv(csv_path)
     df = preprocessing(df)
-    df = filter_outlier(df)
+    #df = filter_outlier(df)
     df = make_treatment(df)
     df = make_confounder(df)
-    df.to_csv("root/graduation_thetis/causal-bert-pytorch/input/watch_train.csv",index = None)
+    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess.csv",index = None)

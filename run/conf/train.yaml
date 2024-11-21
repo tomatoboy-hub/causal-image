@@ -12,12 +12,12 @@ learning_rate: 2e-5
 
 
 #
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1116.csv
 image_column: "img_path"
-confounds_column: "light_or_dark"
-treatments_column: "price_ave"
+confounds_column: "sharpness_ave"
+treatments_column: "light_or_dark"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_with_albuaug.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_appliance_augumantation.yaml
 
 batch_size: ${batch_size}
 num_workers: 31
@@ -25,5 +25,6 @@ epoch: ${epoch}
 seed: ${seed}
 augmentation: True
 use_mask_loss: False
+mask_ratio: 0.1
 
 total_training_steps: ??? 

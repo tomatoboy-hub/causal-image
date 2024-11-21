@@ -11,13 +11,14 @@ from omegaconf import DictConfig
 
 from transformers import get_linear_schedule_with_warmup
 
-def random_mask(features, mask_ratio=0.15):
+def random_mask(images, mask_ratio=0.15):
     """
-    画像特徴量に対するランダムマスクを生成
+    画像に対するランダムマスクを生成し適用。
     """
-    mask = torch.rand(features.size()) < mask_ratio
-    mask = mask.float()
-    return mask
+    # マスクを適用する領域を指定する
+    mask = torch.rand(images.size(0), 1, images.size(2), images.size(3), device=images.device) < mask_ratio
+    masked_images = images * (~mask)  # マスク部分を0に
+    return masked_images, mask
 
 
 class ImageCausalModel(LightningModule):
@@ -52,6 +53,14 @@ class ImageCausalModel(LightningModule):
         self.mask_losses = []
         self.losses = []
         self.total_training_steps = cfg.total_training_steps
+        self.decoder = nn.Sequential(
+            nn.ConvTranspose2d(self.base_model.num_features, 128, kernel_size=4, stride=4),
+            nn.ReLU(),
+            nn.ConvTranspose2d(128, 64, kernel_size=4, stride=2, padding=1),
+            nn.ReLU(),
+            nn.ConvTranspose2d(64, 3, kernel_size=4, stride=2, padding=1),
+            nn.Sigmoid()  # 出力を0-1の範囲に収める
+        )
 
     def init_weights(self):
         for m in self.modules():
@@ -146,7 +155,22 @@ class ImageCausalModel(LightningModule):
     
     def __share_step(self, batch, batch_idx):
         images, confounds, treatment,outcome = batch
-        features = self.base_model(images)
+         # 画像にマスクを適用
+        if self.cfg.use_mask_loss:
+            masked_images, mask = random_mask(images, mask_ratio=self.cfg.mask_ratio)
+            features = self.base_model(masked_images)
+            # 特徴をデコーダーに通して元画像サイズに再構成
+            reconstructed_images = self.decoder(features.unsqueeze(-1).unsqueeze(-1))
+            
+            # 必要に応じてリサイズ
+            if reconstructed_images.shape[2:] != images.shape[2:]:
+                reconstructed_images = F.interpolate(reconstructed_images, size=images.shape[2:])
+            
+            # MSE損失で再構成の精度を計算
+            masking_loss = F.mse_loss(reconstructed_images, images)
+        else:
+            features = self.base_model(images)
+            masking_loss = 0.0
     
         C = self._make_confound_vector(confounds.unsqueeze(1), self.cfg.num_labels)
         inputs = torch.cat((features, C), dim = 1)
@@ -170,16 +194,6 @@ class ImageCausalModel(LightningModule):
             Q_loss = Q_loss_T1 + Q_loss_T0
         else:
             Q_loss = 0.0
-
-        if self.cfg.use_mask_loss:
-            mask = random_mask(features)
-            mask = mask.to(features.device)
-            masked_features = features * (1 - mask)
-            reconstructed_features = self.base_model(masked_features)
-            masking_loss = F.mse_loss(reconstructed_features, features)
-        else:
-            masking_loss = 0.0
-
 
         sm = torch.nn.Softmax(dim = 1)
         Q_prob_T0 = sm(Q_logits_T0)[:,1]

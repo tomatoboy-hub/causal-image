@@ -15,7 +15,7 @@ from src.utils.common import set_seed, save_experiment_result
 def main(cfg:DictConfig):
     print("done")
     set_seed(cfg.seed)
-    df = pd.read_csv("/root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv")
+    df = pd.read_csv(cfg.df_path)
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
     
     data_module = CausalImageDataModule(cfg,df)

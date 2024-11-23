@@ -33,7 +33,7 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
     y1s = []
 
     for i, data in df.iterrows():
-        light_or_dark = data["sharpness_ave"]
+        light_or_dark = data["contains_text"]
         treatment = data["light_or_dark"]
 
         confounding = 3.0 * (price_ave_given_dark_probs[light_or_dark] - 0.785)
@@ -54,11 +54,11 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
     return df
 
 if __name__ == "__main__":
-    csv_path = "./Appliances_preprocess.csv"
-    confounder = "sharpness_ave"
+    csv_path = "./Appliances_preprocess_1122.csv"
+    confounder = "contains_text"
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
     df = make_price_dark_probs(df,0.5, 5.0,probability_0,probability_1,0.0,"simple", 0)
-    df.to_csv("./Appliances_preprocess_1116.csv", index = None)
+    df.to_csv("./Appliances_preprocess_contains_text_1122.csv", index = None)
 

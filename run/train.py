@@ -16,7 +16,7 @@ def main(cfg:DictConfig):
     print("done")
     set_seed(cfg.seed)
     df = pd.read_csv(cfg.df_path)
-    df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
+    #df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
     
     data_module = CausalImageDataModule(cfg,df)
     train_dataset_size = len(data_module.train_dataset)

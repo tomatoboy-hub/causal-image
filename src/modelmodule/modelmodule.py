@@ -192,6 +192,7 @@ class ImageCausalModel(LightningModule):
             Q_loss_T0 = CrossEntropyLoss()(Q_logits_T0.view(-1, self.cfg.num_labels), Y_T0_labels)
 
             Q_loss = Q_loss_T1 + Q_loss_T0
+    
         else:
             Q_loss = 0.0
 

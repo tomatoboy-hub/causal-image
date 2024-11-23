@@ -9,15 +9,16 @@ loss_weights:
   masking: 1.0
 CUDA: True
 learning_rate: 2e-5
+sampler: weighted
 
 
 #
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1116.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_contains_text_1122.csv
 image_column: "img_path"
-confounds_column: "sharpness_ave"
+confounds_column: "contains_text"
 treatments_column: "light_or_dark"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_appliance_augumantation.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_appliance_contain_text_with_aug.yaml
 
 batch_size: ${batch_size}
 num_workers: 31

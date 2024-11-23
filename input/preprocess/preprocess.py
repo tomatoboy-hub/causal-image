@@ -51,7 +51,7 @@ def filter_outlier(output_df):
     filtered_df = output_df[(output_df["actual_price_yen"] >= lower_bound) & (output_df["actual_price_yen"] <= upper_bound)]
     return filtered_df
 
-def make_treatment(filtered_df):
+def make_confounder(filtered_df):
     def calculate_sharpness(img_path):
         # 画像をグレースケールで読み込む
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
@@ -71,7 +71,45 @@ def make_treatment(filtered_df):
     filtered_df["sharpness_ave"] = filtered_df["sharpness"].apply(lambda x: 1 if x > mean_edge else 0)
     return filtered_df
 
-def make_confounder(df):
+def make_confounder_include_text(filtered_df):
+    import easyocr
+    def contains_text_easyocr(img_path, languages=['en']):
+        # EasyOCRリーダーを初期化（言語を指定）
+        reader = easyocr.Reader(languages)
+
+        # OCRでテキストを抽出
+        results = reader.readtext(img_path)
+        print(results)
+        # 結果が空でないかを判定
+        if results:
+            # 抽出されたテキストをリストにまとめる
+            extracted_text = [result[1] for result in results]  # result[1] は抽出された文字列
+            return 1
+        else:
+            return 0
+    filtered_df["contains_text"] = filtered_df["img_path"].apply(contains_text_easyocr)
+    return filtered_df
+
+def make_confounder_tesseract_text(filtered_df):
+    import pytesseract
+    def contains_text(img_path):
+        # 画像を読み込む
+        img = cv2.imread(img_path)
+
+        # グレースケールに変換（OCRに適しているため）
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # OCRでテキストを抽出
+        extracted_text = pytesseract.image_to_string(gray)
+        # 抽出されたテキストが空でないかを判定
+        if extracted_text.strip():
+            return 1
+        else:
+            return 0  # 文字が含まれていない
+    filtered_df["contains_text"] = filtered_df["img_path"].apply(contains_text)
+    return filtered_df
+
+def make_treatment(df):
     def is_dark_or_light(image_path, threshold=160):
         # 画像を読み込んでRGBに変換
         img = Image.open(image_path).convert('RGB')
@@ -99,6 +137,8 @@ if __name__ == "__main__":
     df = pd.read_csv(csv_path)
     df = preprocessing(df)
     #df = filter_outlier(df)
+    #df = make_confounder(df)
+    #df = make_confounder_include_text(df)
+    df = make_confounder_tesseract_text(df)
     df = make_treatment(df)
-    df = make_confounder(df)
-    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess.csv",index = None)
+    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1122.csv",index = None)

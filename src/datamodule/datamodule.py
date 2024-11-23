@@ -1,4 +1,4 @@
-from torch.utils.data import Dataset, DataLoader, RandomSampler,SequentialSampler
+from torch.utils.data import Dataset, DataLoader, RandomSampler,SequentialSampler,WeightedRandomSampler
 import torchvision.transforms as transforms
 from PIL import Image
 from pytorch_lightning import LightningDataModule
@@ -129,7 +129,18 @@ class CausalImageDataModule(LightningDataModule):
         self.train_dataset = CausalImageDataset(cfg = self.cfg,df = self.df)
         self.predict_dataset = CausalImageDataset_validation(cfg = self.cfg,df = self.df)
     def train_dataloader(self):
-        sampler = SequentialSampler(self.train_dataset)
+        if self.cfg.sampler == "weighted":
+            treatment_counts = self.df[self.cfg.treatments_column].value_counts()
+            num_samples = len(self.df)
+            weights = self.df[self.cfg.treatments_column].apply(lambda x: 1.0/treatment_counts[x]).values
+            print(weights)
+            sampler = WeightedRandomSampler(
+                    weights,
+                    num_samples,
+                    replacement=True
+                    )
+        elif self.cfg.sampler == "sequential":
+            sampler = SequentialSampler(self.train_dataset)
         train_loader = DataLoader(
             self.train_dataset,
             batch_size = self.cfg.batch_size,

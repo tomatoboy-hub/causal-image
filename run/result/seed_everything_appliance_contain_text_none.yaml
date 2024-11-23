@@ -1,0 +1,360 @@
+exp1:
+  ATE: -0.4366413145694451
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp10:
+  ATE: -0.0775599390409378
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp11:
+  ATE: 0.37780068682348783
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp12:
+  ATE: 0.117936131043172
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp13:
+  ATE: -0.2758049915549097
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp14:
+  ATE: -0.42113322691212357
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp15:
+  ATE: -0.3767279544725581
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp16:
+  ATE: -0.40588439180641017
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp17:
+  ATE: 0.3500879473989043
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp18:
+  ATE: -0.5690974948248946
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp19:
+  ATE: 0.17098109961812907
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp2:
+  ATE: 0.4232079784015795
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp20:
+  ATE: 0.3283815939910051
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp21:
+  ATE: 0.44384282950737564
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp22:
+  ATE: -0.5258515708263553
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp23:
+  ATE: -0.5685600435333523
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp24:
+  ATE: -0.5625684838384272
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp25:
+  ATE: 0.479458675090869
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp26:
+  ATE: 0.3646435153947345
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp27:
+  ATE: -0.5568100613922828
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp28:
+  ATE: 0.4071319227782005
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp29:
+  ATE: -0.5149580381796675
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp3:
+  ATE: 0.165897354398123
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp30:
+  ATE: 0.4398621589119295
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp31:
+  ATE: 0.4260816156003831
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp32:
+  ATE: -0.5470891269436465
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp33:
+  ATE: -0.5830627625490306
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp34:
+  ATE: -0.5499433235524175
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp35:
+  ATE: -0.567340806106339
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp36:
+  ATE: -0.5331368580587745
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp37:
+  ATE: -0.5074149709779465
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp38:
+  ATE: -0.5555255302295896
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp39:
+  ATE: 0.4643941715818299
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp4:
+  ATE: -0.26152988254427
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp40:
+  ATE: -0.4957717014044961
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp41:
+  ATE: 0.31542686161165145
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp42:
+  ATE: -0.2535267416702645
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp43:
+  ATE: -0.5280012201298686
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp44:
+  ATE: -0.30684436089973177
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp45:
+  ATE: -0.2290060024474262
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp46:
+  ATE: -0.5389176437541833
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp47:
+  ATE: -0.2320319339179606
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp48:
+  ATE: -0.45956998714387537
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp49:
+  ATE: 0.3320394880698768
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp5:
+  ATE: -0.12740908545977797
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp50:
+  ATE: -0.36664218186042535
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp51:
+  ATE: 0.31819799731509474
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp52:
+  ATE: 0.28348145945777864
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp53:
+  ATE: 0.3705189191659773
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp54:
+  ATE: -0.23441063738387125
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp55:
+  ATE: 0.021843677148615855
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp56:
+  ATE: -0.5092725359442429
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp57:
+  ATE: -0.1012582525464834
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp58:
+  ATE: 0.40231341953734734
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp59:
+  ATE: -0.44326045893842986
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839
+exp6:
+  ATE: -0.5583560972841629
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp60:
+  ATE: 0.25834770210369407
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp7:
+  ATE: 0.3891485028566068
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp8:
+  ATE: 0.20497930745923496
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp9:
+  ATE: -0.058992988589277054
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819

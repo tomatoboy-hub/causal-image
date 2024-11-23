@@ -1,0 +1,5 @@
+exp55:
+  ATE: 0.13780545735284555
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k

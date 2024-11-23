@@ -1,0 +1,360 @@
+exp1:
+  ATE: 0.06654617258000807
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp10:
+  ATE: 0.053907546400440765
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp11:
+  ATE: 0.05363001862026619
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp12:
+  ATE: 0.06396285425984587
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp13:
+  ATE: 0.06384586056392269
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp14:
+  ATE: 0.05970179109838326
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp15:
+  ATE: 0.054414535170547465
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp16:
+  ATE: 0.06258155867629404
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp17:
+  ATE: 0.06163244401608584
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp18:
+  ATE: 0.0540253140704316
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp19:
+  ATE: 0.05812889051236791
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp2:
+  ATE: 0.0673052816096175
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp20:
+  ATE: 0.06036394135962725
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp21:
+  ATE: 0.11127953290860007
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp22:
+  ATE: 0.09991293576062052
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp23:
+  ATE: 0.09067967961605172
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp24:
+  ATE: -6.813885007404203e-05
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp25:
+  ATE: 0.10104908177056167
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp26:
+  ATE: 0.0008570573889076837
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp27:
+  ATE: 0.06149419657218878
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp28:
+  ATE: 0.10286790965423188
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp29:
+  ATE: 0.08457102091883476
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp3:
+  ATE: 0.05649399850098407
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp30:
+  ATE: 0.09382189924845155
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp31:
+  ATE: 0.09867734586693358
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp32:
+  ATE: 0.13784245605778947
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp33:
+  ATE: 0.10345454660510417
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp34:
+  ATE: 0.06202432437955958
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp35:
+  ATE: 0.08132186546850084
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp36:
+  ATE: 0.029764838857872174
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp37:
+  ATE: 0.05503124553420995
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp38:
+  ATE: 0.07329667514791219
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp39:
+  ATE: 0.13183932840502727
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp4:
+  ATE: 0.06760938402328723
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp40:
+  ATE: 0.03191305315623722
+  batch_size: 32
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp41:
+  ATE: 0.0882824996905046
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp42:
+  ATE: 0.09122839065662594
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp43:
+  ATE: 0.11578722866377796
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp44:
+  ATE: 0.0856708388136362
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp45:
+  ATE: 0.1052959077140399
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp46:
+  ATE: 0.10364565642186514
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp47:
+  ATE: 0.11131889897418148
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp48:
+  ATE: 0.09318586691814587
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp49:
+  ATE: 0.10196257081313553
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp5:
+  ATE: 0.053475420457746295
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp50:
+  ATE: 0.07539994109402288
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp51:
+  ATE: 0.10620103513767658
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp52:
+  ATE: 0.09691459986007137
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp53:
+  ATE: 0.09742704905588505
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp54:
+  ATE: 0.09462986520021961
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp55:
+  ATE: 0.09950927900512306
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp56:
+  ATE: 0.12050681485282631
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp57:
+  ATE: 0.10698654733392689
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp58:
+  ATE: 0.06846528127570835
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp59:
+  ATE: 0.06409283684695263
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839
+exp6:
+  ATE: 0.05433354448768356
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp60:
+  ATE: 0.11347004159559035
+  batch_size: 32
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp7:
+  ATE: 0.056627277431364885
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp8:
+  ATE: 0.06397087272891465
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp9:
+  ATE: 0.05764713786605099
+  batch_size: 32
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819

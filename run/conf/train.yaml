@@ -6,23 +6,26 @@ num_labels: 2
 loss_weights:
   g: 0.1
   Q: 0.1
+  masking: 1.0
 CUDA: True
 learning_rate: 2e-5
+sampler: weighted
 
 
 #
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/outputs_v4.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_contains_text_1122.csv
 image_column: "img_path"
-confounds_column: "light_or_dark"
-treatments_column: "price_ave"
+confounds_column: "contains_text"
+treatments_column: "light_or_dark"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_with_albuaug.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/seed_everything_appliance_contain_text_with_aug.yaml
 
 batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
 seed: ${seed}
 augmentation: True
-use_mask_loss: True
+use_mask_loss: False
+mask_ratio: 0.1
 
 total_training_steps: ??? 

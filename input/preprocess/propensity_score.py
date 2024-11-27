@@ -16,7 +16,7 @@ def calculate_propensity_score(df, confounder, treatment):
 def outcome_sim(beta0, beta1, gamma, treatment, confounding, noise, setting = "simple"):
     if setting == "simple":
         y0 = beta1 * confounding
-        y1 = beta0 * y0
+        y1 = beta0 + y0
 
         simulated_score = (1. - treatment) * y0 + treatment * y1 + gamma * noise
     return simulated_score, y0,y1
@@ -36,7 +36,7 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
         light_or_dark = data["contains_text"]
         treatment = data["light_or_dark"]
 
-        confounding = 3.0 * (price_ave_given_dark_probs[light_or_dark] - 0.785)
+        confounding = (price_ave_given_dark_probs[light_or_dark] - 0.785)
         noise = all_noise[i]
         y,y0,y1 = outcome_sim(treat_strength, con_strength, noise_level,treatment, confounding, noise, setting = setting)
         simulated_prob = expit(y)
@@ -47,7 +47,17 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
         outcomes.append(simulated_outcome)
         y0s.append(y0)
         y1s.append(y1)
-        
+
+    randoms = np.random.uniform(0, 1, len(df['light_or_dark']))
+    accuracy = -1
+    if isinstance(accuracy, tuple): # TODO this is a hack
+        pThatGivenT = accuracy
+    elif accuracy > 0:
+        pThatGivenT = [1 - accuracy, accuracy]
+    else:
+        pThatGivenT = [0.2, 0.8]
+    mask = np.array([pThatGivenT[ti] for ti in df['light_or_dark']])
+    df['T_proxy'] = (randoms < mask).astype(int)
     df['outcome'] = outcomes
     df['y0'] = y0s
     df['y1'] = y1s
@@ -59,6 +69,6 @@ if __name__ == "__main__":
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
-    df = make_price_dark_probs(df,0.5, 5.0,probability_0,probability_1,0.0,"simple", 0)
-    df.to_csv("./Appliances_preprocess_contains_text_1122.csv", index = None)
+    df = make_price_dark_probs(df,0.9, 4.0,probability_0,probability_1,0.0,"simple", 0)
+    df.to_csv("./Appliances_preprocess_contains_text_1125.csv", index = None)
 

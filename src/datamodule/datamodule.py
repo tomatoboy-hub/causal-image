@@ -133,7 +133,6 @@ class CausalImageDataModule(LightningDataModule):
             treatment_counts = self.df[self.cfg.treatments_column].value_counts()
             num_samples = len(self.df)
             weights = self.df[self.cfg.treatments_column].apply(lambda x: 1.0/treatment_counts[x]).values
-            print(weights)
             sampler = WeightedRandomSampler(
                     weights,
                     num_samples,

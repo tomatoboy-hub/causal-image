@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import numpy.random as random
 from scipy.special import expit
-
+from collections import defaultdict
 
 def calculate_propensity_score(df, confounder, treatment):
     confounder_df = df[df[confounder] == 0]
@@ -63,6 +63,51 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
     df['y1'] = y1s
     return df
 
+def adjust_precision_recall(df, target_precision, target_recall):
+    # now balance data again so proxy treatment has right precision
+    x = defaultdict(int)
+    for t_true, t_proxy in zip(df.light_or_dark, df.T_proxy):
+        x[t_true, t_proxy] += 1
+    true_precision = x[1, 1] / (x[0, 1] + x[1, 1])
+    true_recall = x[1, 1] / (x[1, 1] + x[1, 0])
+
+    true1_subset = df.loc[df.light_or_dark == 1]
+    true0_subset = df.loc[df.light_or_dark == 0]
+    true1_proxy1_subset = true1_subset.loc[true1_subset.T_proxy == 1]
+    true1_proxy0_subset = true1_subset.loc[true1_subset.T_proxy == 0]
+    true0_proxy1_subset = true0_subset.loc[true0_subset.T_proxy == 1]
+
+    if target_precision > true_precision:
+        # adjust precision with inverse of y = tp / (tp + x)
+        tgt_num_t0p1 = -len(true1_proxy1_subset) * (target_precision - 1) / target_precision
+        drop_prop = (len(true0_proxy1_subset) - tgt_num_t0p1) / len(true0_proxy1_subset)
+        df = df.drop(true0_proxy1_subset.sample(frac=drop_prop).index)
+    else:
+        # adjust down with inverse of y = x / (x + fp)
+        tgt_num_t1p1 = - (len(true0_proxy1_subset) * target_precision) / (target_precision - 1)
+        drop_prop = (len(true1_proxy1_subset) - tgt_num_t1p1) / len(true1_proxy1_subset)
+        df = df.drop(true1_proxy1_subset.sample(frac=drop_prop).index)
+
+    # refresh subsets (TODO refactor)
+    true1_subset = df.loc[df.light_or_dark == 1]
+    true0_subset = df.loc[df.light_or_dark == 0]
+    true1_proxy1_subset = true1_subset.loc[true1_subset.T_proxy == 1]
+    true1_proxy0_subset = true1_subset.loc[true1_subset.T_proxy == 0]
+    true0_proxy1_subset = true0_subset.loc[true0_subset.T_proxy == 1]
+
+    if target_recall > true_recall:
+        # adjust recall with inverse of t1p1 / (t1p1 + x)
+        tgt_num_t1p0 = -len(true1_proxy1_subset) * (target_recall - 1) / target_recall
+        drop_prop = (len(true1_proxy0_subset) - tgt_num_t1p0) / len(true1_proxy0_subset)
+        df = df.drop(true1_proxy0_subset.sample(frac=drop_prop).index)
+    else:
+        # adjust down with inverse of y = x / (x + fn)
+        tgt_num_t1p1 = - (len(true1_proxy0_subset) * target_recall) / (target_recall - 1)
+        drop_prop = (len(true1_proxy1_subset) - tgt_num_t1p1) / len(true1_proxy1_subset)
+        df = df.drop(true1_proxy1_subset.sample(frac=drop_prop).index)
+
+    return df
+
 if __name__ == "__main__":
     csv_path = "./Appliances_preprocess_1122.csv"
     confounder = "contains_text"
@@ -70,5 +115,6 @@ if __name__ == "__main__":
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
     df = make_price_dark_probs(df,0.9, 4.0,probability_0,probability_1,0.0,"simple", 0)
-    df.to_csv("./Appliances_preprocess_contains_text_1125.csv", index = None)
+    df = adjust_precision_recall(df, target_precision=0.9, target_recall=0.95)
+    df.to_csv("./Appliances_preprocess_contains_text_1127.csv", index = None)
 

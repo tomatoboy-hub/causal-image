@@ -65,7 +65,8 @@ def main(cfg:DictConfig):
         batch_size=cfg.batch_size,
         epochs=cfg.epoch,
         seed=cfg.seed,
-        ATE=float(ATE_value)
+        ATE=float(ATE_value),
+        desc=cfg.description
     )
 
 

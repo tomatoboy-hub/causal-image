@@ -13,18 +13,21 @@ sampler: weighted
 
 
 #
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_contains_text_1125.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_contains_text_1127.csv
 image_column: "img_path"
 confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1125]seed_everything_appliance_contain_text_aug_proxy.yaml
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1127]seed_everything_appliance_contain_text_proxy_none.yaml
+description: "seed20種類,T_proxyラベル,T_proxy補正あり,augmentationなし,交絡がcontains_text"
+
+
 
 batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
 seed: ${seed}
-augmentation: True
+augmentation: False
 use_mask_loss: False
 mask_ratio: 0.1
 

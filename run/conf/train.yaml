@@ -18,8 +18,8 @@ image_column: "img_path"
 confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1127]seed_everything_appliance_contain_text_proxy_none.yaml
-description: "seed20種類,T_proxyラベル,T_proxy補正あり,augmentationなし,交絡がcontains_text"
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1127]seed_everything_appliance_contain_text_proxy_aug.yaml
+description: "seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text"
 
 
 
@@ -27,7 +27,7 @@ batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
 seed: ${seed}
-augmentation: False
+augmentation: True
 use_mask_loss: False
 mask_ratio: 0.1
 

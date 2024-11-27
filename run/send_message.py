@@ -34,7 +34,7 @@ def ATE_adjusted(C, T, Y):
 
 if __name__ == "__main__":
     # train.yamlからファイルパスを取得
-    with open("/root/graduation_thetis/causal-bert-pytorch/conf/train.yaml", 'r') as yml:
+    with open("/root/graduation_thetis/causal-bert-pytorch/run/conf/train.yaml", 'r') as yml:
         train_config = yaml.safe_load(yml)
 
     yaml_path = train_config["file_name"]

@@ -35,3 +35,5 @@ for model in "${pretrained_models[@]}"; do
         done
     done
 done
+
+python send_message.py 

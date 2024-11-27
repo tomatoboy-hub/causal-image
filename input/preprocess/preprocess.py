@@ -130,6 +130,16 @@ def make_treatment(df):
     
     df["light_or_dark"] = df["img_path"].apply(is_dark_or_light)    
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
+    randoms = np.random.uniform(0, 1, len(df['light_or_dark']))
+    accuracy = -1
+    if isinstance(accuracy, tuple): # TODO this is a hack
+        pThatGivenT = accuracy
+    elif accuracy > 0:
+        pThatGivenT = [1 - accuracy, accuracy]
+    else:
+        pThatGivenT = [0.2, 0.8]
+    mask = np.array([pThatGivenT[ti] for ti in df['light_or_dark']])
+    df['T_proxy'] = (randoms < mask).astype(int)
     return df
 
 if __name__ == "__main__":
@@ -141,4 +151,4 @@ if __name__ == "__main__":
     #df = make_confounder_include_text(df)
     df = make_confounder_tesseract_text(df)
     df = make_treatment(df)
-    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1122.csv",index = None)
+    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1125.csv",index = None)

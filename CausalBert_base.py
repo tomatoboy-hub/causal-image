@@ -305,9 +305,8 @@ if __name__ == '__main__':
     import pandas as pd
 
     df = pd.read_csv('testdata.csv')
-    cb = CausalBertWrapper(batch_size=2,
-        g_weight=0.1, Q_weight=0.1, mlm_weight=1)
-    print(df.T)
+    cb = CausalBertWrapper(batch_size=32,
+        g_weight=1.0, Q_weight=0.1, mlm_weight=1)
     cb.train(df['text'], df['C'], df['T'], df['Y'], epochs=1)
     print(cb.ATE(df['C'], df.text, platt_scaling=True))
 

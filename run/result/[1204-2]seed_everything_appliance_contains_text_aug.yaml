@@ -1,0 +1,7 @@
+exp1:
+  ATE: -0.22983966758072424
+  batch_size: 32
+  desc: 'con:contains_text, treat:0.8, confound: 0.8, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42

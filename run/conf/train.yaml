@@ -13,13 +13,13 @@ sampler: weighted
 
 
 #
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/Appliances_preprocess_contains_text_t10.0c0.8_1203.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/Appliances_preprocess_contains_text_t0.8c0.8_1203.csv
 image_column: "img_path"
 confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1204]seed_everything_appliance_contains_text_aug.yaml
-description: "con:contains_text, treat:10.0, confound: 0.8, aug Yes"
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1204-2]seed_everything_appliance_contains_text_aug.yaml
+description: "con:contains_text, treat:0.8, confound: 0.8, aug Yes"
 
 
 

@@ -25,6 +25,8 @@ from sklearn.linear_model import LogisticRegression
 
 from tqdm import tqdm
 import math
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
 
 CUDA = (torch.cuda.device_count() > 0)
 MASK_IDX = 103
@@ -239,7 +241,20 @@ class CausalBertWrapper:
             # if i > 5: break
         probs = np.array(list(zip(Q0s, Q1s)))
         preds = np.argmax(probs, axis=1)
-
+        print(preds)
+        print(Ys)
+        df = pd.DataFrame({
+            'Q0': Q0s,
+            'Q1': Q1s,
+            'Y': Ys,
+            'pred': preds
+        })
+        df.to_csv('/root/graduation_thetis/causal-bert-pytorch/exp/inference.csv')
+        accuracy = accuracy_score(Ys, preds)
+        precision = precision_score(Ys, preds)
+        recall = recall_score(Ys, preds)
+        f1 = f1_score(Ys, preds)
+        print(f"Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}, F1: {f1}")
         return probs, preds, Ys
 
     def ATE(self, C, W, Y=None, platt_scaling=False):
@@ -354,7 +369,7 @@ def main(cfg:DictConfig):
         g_weight=0.1, Q_weight=0.1, mlm_weight=1)
     print(df.T)
     cb.train(df['text'], df['C'], df['T'], df['Y'], epochs=epochs)
-    ATE_value = cb.ATE(df['C'], df.text, platt_scaling=True)
+    ATE_value = cb.ATE(df['C'], df.text, Y = df['Y'],platt_scaling=True)
     save_experiment_result(
         file_path="/root/graduation_thetis/causal-bert-pytorch/exp/bert_result_multi_seeds.yaml",
         exp_name=f'exp{cfg.exp_id}',

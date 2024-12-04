@@ -1,3 +1,9 @@
+exp1:
+  ATE: -0.0825412276446692
+  batch_size: 32
+  epochs: 3
+  model_name: Distilbert
+  seed: 42
 exp17:
   ATE: -0.22606548776589275
   batch_size: 32

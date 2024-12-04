@@ -90,7 +90,7 @@ class CausalImageDataset_validation(Dataset):
         
         confounds = self.confounds[idx]
         treatment =  -1
-        outcome = -1
+        outcome = self.outcomes[idx] 
         return image , confounds, treatment, outcome
     
 """

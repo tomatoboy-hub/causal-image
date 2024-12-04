@@ -4,6 +4,23 @@ import numpy.random as random
 from scipy.special import expit
 from collections import defaultdict
 
+def ATE_unadjusted(T, Y):
+    x = defaultdict(list)
+    for t, y in zip(T, Y):
+        x[t].append(y)
+    T0 = np.mean(x[0])
+    T1 = np.mean(x[1])
+    return T0 - T1
+
+def ATE_adjusted(C, T, Y):
+    x = defaultdict(list)
+    for c, t, y in zip(C, T, Y):
+        x[c, t].append(y)
+
+    C0_ATE = np.mean(x[0,0]) - np.mean(x[0,1])
+    C1_ATE = np.mean(x[1,0]) - np.mean(x[1,1])
+    return np.mean([C0_ATE, C1_ATE])
+
 def calculate_propensity_score(df, confounder, treatment):
     confounder_df = df[df[confounder] == 0]
     probability_0 = (confounder_df[treatment] == 1).mean()
@@ -36,7 +53,7 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
         light_or_dark = data["contains_text"]
         treatment = data["light_or_dark"]
 
-        confounding = (price_ave_given_dark_probs[light_or_dark] - 0.785)
+        confounding = (price_ave_given_dark_probs[light_or_dark] - 0.55)
         noise = all_noise[i]
         y,y0,y1 = outcome_sim(treat_strength, con_strength, noise_level,treatment, confounding, noise, setting = setting)
         simulated_prob = expit(y)
@@ -108,13 +125,34 @@ def adjust_precision_recall(df, target_precision, target_recall):
 
     return df
 
+def adjust_propensity(df, target_propensities,true_propensities):
+    # subset to to desired propensities (must be smaller than true)
+    true_propensities = true_propensities
+    target_propensities = [0.70, 0.80] # works well
+
+    for i, (pi_tgt, pi_true) in enumerate(zip(target_propensities, true_propensities)):
+        # drop enough samples so that we get the desired propensity
+        # inverse of y = x / (x + out sample size) gives you tgt number for proportion
+        Ci_subset = df.loc[df.contains_text == i]
+        Ci_T0_subset = Ci_subset.loc[Ci_subset.light_or_dark == 0]
+        Ci_T1_subset = Ci_subset.loc[Ci_subset.light_or_dark == 1]
+        tgt_num = -len(Ci_T0_subset) * pi_tgt / (pi_tgt - 1)
+        drop_prop = (len(Ci_T1_subset) - tgt_num) / len(Ci_T1_subset)
+        print(drop_prop)
+        df = df.drop(Ci_T1_subset.sample(frac=drop_prop).index)
+    return df
+
 if __name__ == "__main__":
-    csv_path = "./Appliances_preprocess_1122.csv"
+    csv_path = "./processed_base/Appliances_preprocess_containstext_1129.csv"
     confounder = "contains_text"
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
-    df = make_price_dark_probs(df,0.9, 4.0,probability_0,probability_1,0.0,"simple", 0)
-    df = adjust_precision_recall(df, target_precision=0.9, target_recall=0.95)
-    df.to_csv("./Appliances_preprocess_contains_text_1127.csv", index = None)
-
+    #df = adjust_propensity(df,[0.8, 0.7],[probability_0,probability_1])
+    treatment_strength =10.0
+    confounding_strength = 0.8
+    df = make_price_dark_probs(df,treatment_strength, confounding_strength,probability_0,probability_1,0.0,"simple", 0)
+    df = adjust_precision_recall(df, target_precision=0.94, target_recall=0.98)
+    df.to_csv(f"./modelinput/Appliances_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1203.csv", index = None)
+    print("ATE_unadjusted: ", ATE_unadjusted(df["T_proxy"], df["outcome"]))
+    print("ATE_adjusted: ", ATE_adjusted(df[confounder], df[treatment],df["outcome"]))

@@ -1,0 +1,420 @@
+exp1:
+  ATE: -0.08038705699946323
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp10:
+  ATE: -0.00535703924775046
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp11:
+  ATE: -0.12264666128487191
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp12:
+  ATE: -0.06839651972320661
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp13:
+  ATE: -0.10391080995003986
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp14:
+  ATE: -0.05933598485729403
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp15:
+  ATE: -0.08444394721419739
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp16:
+  ATE: -0.07696437188154295
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp17:
+  ATE: -0.028354638416440568
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp18:
+  ATE: -0.04402172069293909
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp19:
+  ATE: -0.06750065322123615
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp2:
+  ATE: 0.045435656260740274
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp20:
+  ATE: -0.10013166569385193
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp21:
+  ATE: -0.14686709281173588
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp22:
+  ATE: -0.15372446901449305
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp23:
+  ATE: -0.07086610513282346
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp24:
+  ATE: -0.0570754361854556
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp25:
+  ATE: -0.07160821490506174
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp26:
+  ATE: -0.12978607265114614
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp27:
+  ATE: -0.0876944247183891
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp28:
+  ATE: 0.002977755307795261
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp29:
+  ATE: -0.09475898327526491
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp3:
+  ATE: -0.03757276741328094
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp30:
+  ATE: 0.028896659573398736
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp31:
+  ATE: -0.1148810098543644
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp32:
+  ATE: -0.025353368134820944
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp33:
+  ATE: -0.03354705460830182
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp34:
+  ATE: -0.12391746221203243
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp35:
+  ATE: -0.11685879757424086
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp36:
+  ATE: -0.20319813254859556
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp37:
+  ATE: -0.07982718497763042
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp38:
+  ATE: -0.062288189358075924
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp39:
+  ATE: -0.025659383068419774
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp4:
+  ATE: -0.06864580878834675
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp40:
+  ATE: -0.13879577183744338
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp41:
+  ATE: -0.04848405646351482
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp42:
+  ATE: -0.06322623202255809
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp43:
+  ATE: 0.046463372797543714
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp44:
+  ATE: -0.017530319031262464
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp45:
+  ATE: -0.01872182142418844
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp46:
+  ATE: -0.054277839799338215
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp47:
+  ATE: -0.03945344803595662
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp48:
+  ATE: -0.11529877451306081
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp49:
+  ATE: -0.028959050784277664
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp5:
+  ATE: -0.07548326203433402
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp50:
+  ATE: -0.03358402059035263
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp51:
+  ATE: 0.01848384153824813
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp52:
+  ATE: -0.06626550112237427
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp53:
+  ATE: -0.0878179341696958
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp54:
+  ATE: -0.08798170554837152
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp55:
+  ATE: -0.09607649233094363
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp56:
+  ATE: -0.0006257172763696947
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp57:
+  ATE: -0.04791851738592744
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp58:
+  ATE: -0.06057500788452363
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp59:
+  ATE: -0.028927141437050264
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839
+exp6:
+  ATE: -0.05738336802344015
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp60:
+  ATE: -0.046385662546508714
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp7:
+  ATE: -0.0397663326048142
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp8:
+  ATE: -0.055235893346914276
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp9:
+  ATE: -0.030868431111336376
+  batch_size: 32
+  desc: seed20,T_proxy,T_proxy_adjust yes,augmentation Yes,confounder:contains_text
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819

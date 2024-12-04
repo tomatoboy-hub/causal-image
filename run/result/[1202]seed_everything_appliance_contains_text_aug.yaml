@@ -1,0 +1,840 @@
+exp1:
+  ATE: -0.25399880131255737
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp10:
+  ATE: -0.14997013132433243
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp100:
+  ATE: -0.14384271444626814
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp101:
+  ATE: -0.2183664273303655
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp102:
+  ATE: -0.1595414470890332
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp103:
+  ATE: -0.12453780114990769
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp104:
+  ATE: -0.16445188899239876
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp105:
+  ATE: -0.07608550006088048
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp106:
+  ATE: -0.21908512319261306
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp107:
+  ATE: -0.14661865463418114
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp108:
+  ATE: -0.12337264566459885
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp109:
+  ATE: -0.1661326593090192
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp11:
+  ATE: -0.17249646195086796
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp110:
+  ATE: -0.16553371824390925
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp111:
+  ATE: -0.15563210699868182
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp112:
+  ATE: -0.13995295682862802
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp113:
+  ATE: -0.1675567853020864
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp114:
+  ATE: -0.10764205300028283
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp115:
+  ATE: -0.17893258170107076
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp116:
+  ATE: -0.11913999133935378
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp117:
+  ATE: -0.11517568801232927
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp118:
+  ATE: -0.15329222128511738
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp119:
+  ATE: -0.19520577461061772
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839
+exp12:
+  ATE: -0.21486035058579994
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp120:
+  ATE: -0.1851462360347007
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp13:
+  ATE: -0.18451984936239377
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp14:
+  ATE: -0.22752667717580982
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp15:
+  ATE: -0.20284126011902176
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp16:
+  ATE: -0.12484612811991327
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp17:
+  ATE: -0.12118544023310934
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp18:
+  ATE: -0.16680221272800982
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp19:
+  ATE: -0.18451328400731962
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp2:
+  ATE: -0.1877505291183498
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp20:
+  ATE: -0.09482991853584676
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp21:
+  ATE: -0.1739231044822771
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp22:
+  ATE: -0.17647510026782726
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp23:
+  ATE: -0.15076334565610738
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp24:
+  ATE: -0.20054743280474888
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp25:
+  ATE: -0.15824178200042044
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp26:
+  ATE: -0.14744286356947728
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp27:
+  ATE: -0.12687491619778826
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp28:
+  ATE: -0.09631858322808873
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp29:
+  ATE: -0.14562941083916825
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819
+exp3:
+  ATE: -0.20627650217484825
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp30:
+  ATE: -0.1698993848911513
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp31:
+  ATE: -0.16904716292045519
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp32:
+  ATE: -0.19783055280754988
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp33:
+  ATE: -0.15806104049402325
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp34:
+  ATE: -0.1738558926702323
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp35:
+  ATE: -0.09620247594556773
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp36:
+  ATE: -0.16438376771160132
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp37:
+  ATE: -0.06664849822610593
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp38:
+  ATE: -0.11862358191606953
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp39:
+  ATE: -0.1253595380347826
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp4:
+  ATE: -0.13771322108623013
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp40:
+  ATE: -0.18451210481479777
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp41:
+  ATE: -0.1713225709718608
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp42:
+  ATE: -0.1720342253136646
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp43:
+  ATE: -0.15066872740176396
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp44:
+  ATE: -0.16469491749925577
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp45:
+  ATE: -0.048905376891955364
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp46:
+  ATE: -0.2251139316511866
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp47:
+  ATE: -0.15101066733779483
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp48:
+  ATE: -0.05466580759965591
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp49:
+  ATE: -0.13285629056764978
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp5:
+  ATE: -0.1595390081791224
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp50:
+  ATE: -0.05353710539493768
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp51:
+  ATE: -0.16114630955646503
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp52:
+  ATE: -0.04221034311574619
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp53:
+  ATE: -0.1953531155987212
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp54:
+  ATE: -0.17627880348015684
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp55:
+  ATE: -0.17885083416040912
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp56:
+  ATE: -0.23554528166350544
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp57:
+  ATE: -0.15916327232321326
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp58:
+  ATE: -0.23689982168216303
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp59:
+  ATE: -0.05353204125734089
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp6:
+  ATE: -0.23175102025999125
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp60:
+  ATE: -0.22095634501543543
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp61:
+  ATE: -0.19704522306287295
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp62:
+  ATE: -0.1879649270033863
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp63:
+  ATE: -0.17096017272155498
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp64:
+  ATE: -0.19317256132046742
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp65:
+  ATE: -0.1761785601758419
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp66:
+  ATE: -0.14564480946858743
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp67:
+  ATE: -0.14073467983902777
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp68:
+  ATE: -0.161013113069189
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp69:
+  ATE: -0.15510629607932286
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp7:
+  ATE: -0.11758177282369127
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp70:
+  ATE: -0.010532906249934445
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp71:
+  ATE: -0.15282714470595482
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp72:
+  ATE: -0.07863670924367075
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp73:
+  ATE: -0.1226380417711658
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp74:
+  ATE: -0.21154018766717547
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp75:
+  ATE: -0.15287419179067677
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp76:
+  ATE: -0.25943226299454886
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp77:
+  ATE: -0.1763366656504722
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp78:
+  ATE: -0.20786035665702962
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp79:
+  ATE: -0.07218052531358193
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp8:
+  ATE: -0.14167362698995203
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp80:
+  ATE: -0.14590339713457517
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp81:
+  ATE: -0.15484007792251325
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp82:
+  ATE: -0.15015611695558342
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp83:
+  ATE: -0.20650394332535207
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp84:
+  ATE: -0.14209258395452856
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp85:
+  ATE: -0.18245493768795584
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp86:
+  ATE: -0.0872223542361067
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp87:
+  ATE: -0.1436758016850177
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp88:
+  ATE: -0.11612993113229016
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp89:
+  ATE: -0.17464064425973264
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp9:
+  ATE: -0.14022545447267937
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819
+exp90:
+  ATE: -0.21002605875017397
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp91:
+  ATE: -0.13675023262565858
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp92:
+  ATE: -0.1654625792806238
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp93:
+  ATE: -0.1155558719308083
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp94:
+  ATE: -0.09936402327614095
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp95:
+  ATE: -0.11098283962228965
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp96:
+  ATE: -0.2583688091010025
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp97:
+  ATE: -0.1458996909305441
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp98:
+  ATE: -0.12556098725801576
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp99:
+  ATE: -0.1724086435907919
+  batch_size: 32
+  desc: 'con:contains_text, treat: 0.8, confound: 10.0, aug Yes'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839

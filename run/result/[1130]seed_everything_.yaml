@@ -1,0 +1,7 @@
+exp1:
+  ATE: -0.15948176293110533
+  batch_size: 32
+  desc: seed20,T_proxy,b0 0.8, b1 0.4,augmentation No,confounder:contains_text
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42

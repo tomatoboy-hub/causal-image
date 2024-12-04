@@ -8,8 +8,9 @@ from torch.nn import CrossEntropyLoss
 import timm 
 from torch.optim import AdamW
 from omegaconf import DictConfig
-
+import pandas as pd
 from transformers import get_linear_schedule_with_warmup
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 def random_mask(images, mask_ratio=0.15):
     """
@@ -48,6 +49,7 @@ class ImageCausalModel(LightningModule):
         self.init_weights()
         self.Q0s = []
         self.Q1s = []
+        self.true_labels = []
         self.g_losses = []
         self.Q_losses = []
         self.mask_losses = []
@@ -129,11 +131,13 @@ class ImageCausalModel(LightningModule):
     """
     def predict_step(self,batch,batch_idx):
         self.eval()
+        images, confounds, treatment, true_labels = batch
         g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss,mask_loss = self.forward(batch, batch_idx)
         Q0s = Q_prob_T0.detach().cpu().numpy().tolist()
         Q1s = Q_prob_T1.detach().cpu().numpy().tolist()
         self.Q0s += Q0s
         self.Q1s += Q1s
+        self.true_labels += true_labels.detach().cpu().numpy().tolist()  # 収集
         return 
     
     def on_predict_epoch_end(self):
@@ -141,7 +145,15 @@ class ImageCausalModel(LightningModule):
         probs = np.array(list(zip(self.Q0s, self.Q1s)))
         preds = np.argmax(probs,axis = 1)
         self.ate_value = self.ATE(probs)
-        self.logger.experiment.log({"ATE": self.ate_value})
+
+        accuracy = accuracy_score(self.true_labels, preds)
+        precision = precision_score(self.true_labels, preds)
+        recall = recall_score(self.true_labels, preds)
+        f1 = f1_score(self.true_labels, preds)
+        df = pd.DataFrame({"Q0s":self.Q0s,"Q1s":self.Q1s,"preds": preds, "true_labels": self.true_labels})
+        df.to_csv("/root/graduation_thetis/causal-bert-pytorch/run/result/predict.csv")
+        self.logger.experiment.log({"ATE": self.ate_value, "accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1})
+        print(f"ATE: {self.ate_value}, Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}, F1: {f1}")
         return {"probs": probs, "preds": preds}
     
     def ATE(self,probs):
@@ -175,14 +187,14 @@ class ImageCausalModel(LightningModule):
         C = self._make_confound_vector(confounds.unsqueeze(1), self.cfg.num_labels)
         inputs = torch.cat((features, C), dim = 1)
         g = self.g_cls(inputs)
-        if torch.all(outcome != -1):
+        if torch.all(treatment != -1):
             g_loss = CrossEntropyLoss()(g.view(-1, self.cfg.num_labels),treatment.view(-1))
         else:
             g_loss = 0.0
 
         Q_logits_T0 = self.Q_cls['0'](inputs)
         Q_logits_T1 = self.Q_cls['1'](inputs)
-        if torch.all(outcome != -1):
+        if torch.all(treatment != -1):
             T0_indices = (treatment == 0).nonzero().squeeze()
             Y_T1_labels = outcome.clone().scatter(0,T0_indices, -100)
 

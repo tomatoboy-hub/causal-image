@@ -1,0 +1,840 @@
+exp1:
+  ATE: -0.21721588265827835
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp10:
+  ATE: -0.0652305360370374
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp100:
+  ATE: -0.12206673538562794
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp101:
+  ATE: -0.18041791496669363
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp102:
+  ATE: -0.11526768056094379
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp103:
+  ATE: -0.045714716423233055
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp104:
+  ATE: -0.17227275195184674
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp105:
+  ATE: -0.02598733917188382
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp106:
+  ATE: -0.15559286064944233
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp107:
+  ATE: -0.03092648018950015
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp108:
+  ATE: -0.05457641280877853
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp109:
+  ATE: -0.061810702679051845
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp11:
+  ATE: -0.07815831041186684
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp110:
+  ATE: -0.10019344918106507
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp111:
+  ATE: -0.11038279092431177
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp112:
+  ATE: -0.10044092144938557
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp113:
+  ATE: -0.08230678873332468
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp114:
+  ATE: -0.09923771031644156
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp115:
+  ATE: -0.07750315104475353
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp116:
+  ATE: -0.10757269427641777
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp117:
+  ATE: -0.05539984078797001
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp118:
+  ATE: -0.06955560194153852
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp119:
+  ATE: -0.12486155186312997
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839
+exp12:
+  ATE: -0.1649286669110477
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp120:
+  ATE: -0.11934489708510702
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4041
+exp13:
+  ATE: -0.05641799886007327
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp14:
+  ATE: -0.17617296852238215
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp15:
+  ATE: -0.11021394673476835
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp16:
+  ATE: -0.060255615905947385
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp17:
+  ATE: -0.027879470827235568
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp18:
+  ATE: -0.10068168921985139
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp19:
+  ATE: -0.1038584887234535
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp2:
+  ATE: -0.04500632112680311
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp20:
+  ATE: -0.026398699516589894
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp21:
+  ATE: -0.0840115340452371
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+exp22:
+  ATE: -0.033123988337881605
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+exp23:
+  ATE: -0.04197701058990361
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp24:
+  ATE: -0.11622250812566902
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp25:
+  ATE: -0.0641310077722085
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp26:
+  ATE: 0.02605541511313548
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp27:
+  ATE: -0.08617811981883103
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp28:
+  ATE: -0.02133681243035059
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp29:
+  ATE: -0.073894079203073
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819
+exp3:
+  ATE: -0.07539010500746378
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+exp30:
+  ATE: -0.04449629263243446
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2021
+exp31:
+  ATE: -0.046111204422336335
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2223
+exp32:
+  ATE: -0.11285776917738408
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2425
+exp33:
+  ATE: -0.006030995552082711
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2627
+exp34:
+  ATE: -0.020425135462553208
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2829
+exp35:
+  ATE: -0.008273865718291291
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3031
+exp36:
+  ATE: -0.02119400324155717
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3233
+exp37:
+  ATE: -0.009904034907862047
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3435
+exp38:
+  ATE: -0.005486984983141235
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3637
+exp39:
+  ATE: -0.06770128480021363
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3839
+exp4:
+  ATE: -0.018989202003248988
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+exp40:
+  ATE: -0.058756273846311255
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4041
+exp41:
+  ATE: -0.14953889171958681
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp42:
+  ATE: -0.12860372378618282
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp43:
+  ATE: -0.1345928857298866
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp44:
+  ATE: -0.17207303459658868
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp45:
+  ATE: 0.054465990621155654
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp46:
+  ATE: -0.25702321882262597
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp47:
+  ATE: -0.17171089698956815
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp48:
+  ATE: -0.017847731032579344
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp49:
+  ATE: -0.12691089039547213
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp5:
+  ATE: -0.041315806271339836
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1011
+exp50:
+  ATE: 0.012438694790020357
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp51:
+  ATE: -0.14811513324498124
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp52:
+  ATE: -0.033797650562313715
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp53:
+  ATE: -0.205168921638967
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp54:
+  ATE: -0.19629761168159268
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp55:
+  ATE: -0.1690359102199256
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp56:
+  ATE: -0.2551369235598184
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp57:
+  ATE: -0.1423627713609814
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp58:
+  ATE: -0.2016955801467324
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp59:
+  ATE: 0.00903427227355462
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp6:
+  ATE: -0.11987698882569262
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1213
+exp60:
+  ATE: -0.2252751086860345
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp61:
+  ATE: -0.21140465880194995
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+exp62:
+  ATE: -0.15709946263361035
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+exp63:
+  ATE: -0.0993987608641373
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+exp64:
+  ATE: -0.15158265118171282
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+exp65:
+  ATE: -0.06887709984111952
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1011
+exp66:
+  ATE: -0.16159600215396927
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1213
+exp67:
+  ATE: -0.14621805200758478
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1415
+exp68:
+  ATE: -0.03788824707859472
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1617
+exp69:
+  ATE: -0.16596265946841485
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1819
+exp7:
+  ATE: -0.05944102308192968
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1415
+exp70:
+  ATE: 0.04903753487822492
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2021
+exp71:
+  ATE: -0.14111817080641406
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2223
+exp72:
+  ATE: -0.04661149567691078
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2425
+exp73:
+  ATE: -0.17670897672023037
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2627
+exp74:
+  ATE: -0.1929876750624562
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2829
+exp75:
+  ATE: -0.17764280511620476
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3031
+exp76:
+  ATE: -0.3276360822997633
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3233
+exp77:
+  ATE: -0.138606428271452
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3435
+exp78:
+  ATE: -0.17064362680504183
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3637
+exp79:
+  ATE: -0.023269994613355438
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3839
+exp8:
+  ATE: -0.04432082533860653
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1617
+exp80:
+  ATE: -0.15944536039906015
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 5
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4041
+exp81:
+  ATE: -0.11359067246645761
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+exp82:
+  ATE: -0.07000574484139609
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+exp83:
+  ATE: -0.15669116276121275
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+exp84:
+  ATE: -0.08353966818826414
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+exp85:
+  ATE: -0.17949077518567286
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1011
+exp86:
+  ATE: -0.02356347502547012
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1213
+exp87:
+  ATE: -0.10641408899833904
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1415
+exp88:
+  ATE: -0.04445404256371434
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1617
+exp89:
+  ATE: -0.0910331171154733
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1819
+exp9:
+  ATE: -0.015431029239355206
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1819
+exp90:
+  ATE: -0.13735926354997705
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2021
+exp91:
+  ATE: -0.09955331741451925
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2223
+exp92:
+  ATE: -0.10330181700627591
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2425
+exp93:
+  ATE: -0.05603875800019954
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2627
+exp94:
+  ATE: -0.03340199895464218
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2829
+exp95:
+  ATE: -0.12588360995515732
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3031
+exp96:
+  ATE: -0.21430137634775265
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3233
+exp97:
+  ATE: -0.11858935033585254
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3435
+exp98:
+  ATE: -0.06726792249175817
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3637
+exp99:
+  ATE: -0.10974183845308708
+  batch_size: 32
+  desc: 'con:sharpness_ave, treat: 0.8, confound: 10.0, aug none'
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3839

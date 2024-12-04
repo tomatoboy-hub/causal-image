@@ -65,10 +65,10 @@ def make_confounder(filtered_df):
         return sharpness
     filtered_df["sharpness"] = filtered_df["img_path"].apply(calculate_sharpness)
     # "actual_price_yen"の平均を計算
-    mean_edge = filtered_df["sharpness"].mean()
-    print(mean_edge)
+    median_edge = filtered_df["sharpness"].median()
+    print(median_edge)
     # "price_ave"列を追加
-    filtered_df["sharpness_ave"] = filtered_df["sharpness"].apply(lambda x: 1 if x > mean_edge else 0)
+    filtered_df["sharpness_ave"] = filtered_df["sharpness"].apply(lambda x: 1 if x > median_edge else 0)
     return filtered_df
 
 def make_confounder_include_text(filtered_df):
@@ -132,13 +132,52 @@ def make_treatment(df):
     df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
     return df
 
+
+def make_treatment_with_median_threshold(df):
+    def calculate_brightness(image_path):
+        # 画像を読み込んでRGBに変換
+        img = Image.open(image_path).convert('RGB')
+        # 画像をNumPy配列に変換
+        img_np = np.array(img)
+        # 輝度の計算 (R, G, B の加重平均)
+        brightness = 0.299 * img_np[:, :, 0] + 0.587 * img_np[:, :, 1] + 0.114 * img_np[:, :, 2]
+        # 画像全体の平均輝度を返す
+        return np.mean(brightness)
+
+    # 各画像の平均輝度を計算
+    df["avg_brightness"] = df["img_path"].apply(calculate_brightness)
+    
+    # 平均輝度の中央値を計算
+    median_threshold = df["avg_brightness"].median()
+    print(f"中央値の閾値: {median_threshold}")
+    
+    # 中央値を基準にして light/dark を判定
+    df["light_or_dark"] = df["avg_brightness"].apply(lambda x: 1 if x >= median_threshold else 0)
+    
+    # light と dark のバランスを取る
+    light_count = len(df[df["light_or_dark"] == 1])
+    dark_count = len(df[df["light_or_dark"] == 0])
+    
+    # 少ない方に合わせてサンプリング
+    if light_count > dark_count:
+        light_sampled = df[df["light_or_dark"] == 1].sample(n=dark_count, random_state=42)
+        dark_sampled = df[df["light_or_dark"] == 0]
+    else:
+        dark_sampled = df[df["light_or_dark"] == 0].sample(n=light_count, random_state=42)
+        light_sampled = df[df["light_or_dark"] == 1]
+    
+    # バランスの取れたデータフレームを作成
+    balanced_df = pd.concat([light_sampled, dark_sampled]).reset_index(drop=True)
+    return balanced_df
+
 if __name__ == "__main__":
     csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/backlog/csv/All Appliances_preprocess.csv"
     df = pd.read_csv(csv_path)
     df = preprocessing(df)
     #df = filter_outlier(df)
-    #df = make_confounder(df)
+    df = make_confounder(df)
     #df = make_confounder_include_text(df)
-    df = make_confounder_tesseract_text(df)
-    df = make_treatment(df)
-    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1125.csv",index = None)
+    #df = make_confounder_tesseract_text(df)
+    df = make_treatment_with_median_threshold(df)
+    #df = make_treatment(df)
+    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1130_sharpness.csv",index = None)

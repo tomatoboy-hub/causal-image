@@ -46,10 +46,10 @@ def main(cfg: DictConfig) -> None:
     # yamlデータを読み込む
     with open(yaml_path, 'r') as yml:
         yaml_data = yaml.safe_load(yml)
-    for epoch in [3,5]:
+    for treat in ["T_proxy" ,"T_plus_pu", "T_plus_reg"]:
         eva_ate, vit_ate, eff_ate = [], [], []
         for k, v in yaml_data.items():
-            if v["epochs"] != epoch:
+            if v["treatment_column"] != treat:
                 continue
             if v['model_name'] == 'timm/eva02_tiny_patch14_224.mim_in22k':
                 eva_ate.append(v['ATE'])
@@ -69,17 +69,20 @@ def main(cfg: DictConfig) -> None:
         confounder = cfg["confounds_column"]
         outcome = cfg["outcome_column"]
         T_proxy = "T_proxy"
+        T_boost = treat
 
         unadjusted_ate = ATE_unadjusted(df[T_proxy], df[outcome])
         adjusted_ate = ATE_adjusted(df[confounder], df[treatment], df[outcome])
+        T_boost_ate = ATE_adjusted(df[confounder], df[T_boost], df[outcome])
 
         unadjusted_stats = f"ATE_unadjusted: {unadjusted_ate:.4f}"
         adjusted_stats = f"ATE_adjusted: {adjusted_ate:.4f}"
+        T_boost_stats = f"ATE_adjusted({treat}): {T_boost_ate:.4f}"
 
         # メール本文を作成
         email_body += "\n".join([
             "パラメータ:",
-            f"epoch={epoch}",
+            f"treat={treat}",
             "ATE統計情報:",
             eva_stats,
             vit_stats,
@@ -88,6 +91,7 @@ def main(cfg: DictConfig) -> None:
             "ATE分析:",
             unadjusted_stats,
             adjusted_stats,
+            T_boost_stats,
         ])
 
     # メールを送信

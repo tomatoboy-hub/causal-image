@@ -171,7 +171,7 @@ def make_treatment_with_median_threshold(df):
     return balanced_df
 
 if __name__ == "__main__":
-    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/backlog/csv/All Appliances_preprocess.csv"
+    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/backlog/csv/watch_preprocess.csv"
     df = pd.read_csv(csv_path)
     df = preprocessing(df)
     #df = filter_outlier(df)

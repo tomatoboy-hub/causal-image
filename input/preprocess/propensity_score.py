@@ -50,10 +50,10 @@ def make_price_dark_probs(df,treat_strength,con_strength,probability_0, probabil
     y1s = []
 
     for i, data in df.iterrows():
-        light_or_dark = data["contains_text"]
+        light_or_dark = data["sharpness_ave"]
         treatment = data["light_or_dark"]
 
-        confounding = (price_ave_given_dark_probs[light_or_dark] - 0.55)
+        confounding = (price_ave_given_dark_probs[light_or_dark] - 0.785)
         noise = all_noise[i]
         y,y0,y1 = outcome_sim(treat_strength, con_strength, noise_level,treatment, confounding, noise, setting = setting)
         simulated_prob = expit(y)
@@ -143,8 +143,8 @@ def adjust_propensity(df, target_propensities,true_propensities):
     return df
 
 if __name__ == "__main__":
-    csv_path = "./processed_base/Appliances_preprocess_containstext_1129.csv"
-    confounder = "contains_text"
+    csv_path = "./processed_base/watch_train_1116.csv"
+    confounder = "sharpness_ave"
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
@@ -155,6 +155,6 @@ if __name__ == "__main__":
     df = adjust_precision_recall(df, target_precision=0.94, target_recall=0.98)
     print(df[df[treatment] == 1]["outcome"].sum()/ len(df[df[treatment] == 1]))
     print(df[df[treatment] == 0]["outcome"].sum()/ len(df[df[treatment] == 0]))
-    df.to_csv(f"./modelinput/Appliances_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1203.csv", index = None)
+    df.to_csv(f"./modelinput/Watch_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1205.csv", index = None)
     print("ATE_unadjusted: ", ATE_unadjusted(df["T_proxy"], df["outcome"]))
     print("ATE_adjusted: ", ATE_adjusted(df[confounder], df[treatment],df["outcome"]))

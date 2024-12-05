@@ -14,7 +14,7 @@ def set_seed(seed: int):
         torch.backends.cudnn.benchmark = False
 
 
-def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,seed,ATE,desc=""):
+def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,seed,ATE,desc="",treatment_column=""):
     new_entry = {
         exp_name: {
             "seed": seed,
@@ -23,6 +23,7 @@ def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,s
             "epochs": epochs,
             "ATE": ATE,
             "desc":desc,
+            "treatment_column":treatment_column
         }
     }
 

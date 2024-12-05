@@ -66,7 +66,8 @@ def main(cfg:DictConfig):
         epochs=cfg.epoch,
         seed=cfg.seed,
         ATE=float(ATE_value),
-        desc=cfg.description
+        desc=cfg.description,
+        treatment_column=cfg.treatments_column
     )
 
 

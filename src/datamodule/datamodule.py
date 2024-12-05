@@ -147,6 +147,7 @@ class CausalImageDataModule(LightningDataModule):
             num_workers = self.cfg.num_workers
         )
         return train_loader
+    
     """
     def val_dataloader(self):
         valid_loader = DataLoader(

@@ -12,13 +12,13 @@ learning_rate: 2e-5
 sampler: weighted
 
 
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv
 image_column: "img_path"
-confounds_column: "contains_text"
+confounds_column: "sharpness_ave"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1205]seed_everything_appliance_contains_text_aug_T-boost_treatments.yaml
-description: "con:contains_text, treat:0.8, confound: 0.8, aug Yes"
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1209]seed_everything_watch_sharpness_ave_aug_T-boost_confounds.yaml
+description: "watch,con:sharpness_ave, treat:0.8, confound: 10.0, aug Yes"
 
 
 

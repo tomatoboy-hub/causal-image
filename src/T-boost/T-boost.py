@@ -96,4 +96,4 @@ def run_parameterized_estimators(
     return None
 
 if __name__ == "__main__":
-    run_parameterized_estimators("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202.csv")
+    run_parameterized_estimators("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/Watch_preprocess_sharpness_ave_t0.8c0.8_1206.csv")

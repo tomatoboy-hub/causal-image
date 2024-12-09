@@ -42,7 +42,8 @@ def main(cfg: DictConfig) -> None:
 
     yaml_path = cfg["file_name"]
     csv_path = cfg["df_path"]
-    email_body = ""
+    description = cfg["description"]
+    email_body = f"description:{description}\n"
     # yamlデータを読み込む
     with open(yaml_path, 'r') as yml:
         yaml_data = yaml.safe_load(yml)

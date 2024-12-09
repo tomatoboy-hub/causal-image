@@ -180,4 +180,4 @@ if __name__ == "__main__":
     #df = make_confounder_tesseract_text(df)
     df = make_treatment_with_median_threshold(df)
     #df = make_treatment(df)
-    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/Appliances_preprocess_1130_sharpness.csv",index = None)
+    df.to_csv("/root/graduation_thetis/causal-bert-pytorch/input/processed_base/Watch_preprocess_1206_sharpness.csv",index = None)

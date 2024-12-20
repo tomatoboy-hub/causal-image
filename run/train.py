@@ -39,6 +39,7 @@ def main(cfg:DictConfig):
     )
 
     trainer.fit(model, data_module)
+    
     """
     trainer = Trainer(
         max_epochs = 1,
@@ -66,7 +67,7 @@ def main(cfg:DictConfig):
         epochs=cfg.epoch,
         seed=cfg.seed,
         ATE=float(ATE_value),
-        desc=cfg.description,
+        desc=cfg.df_path,
         treatment_column=cfg.treatments_column
     )
 

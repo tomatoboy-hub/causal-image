@@ -1,0 +1,121 @@
+﻿Section,Method,Value,Error,image,Confounder,Strength,aug
+4.2.1,T_plus_pu,-0.0921,0,家電製品,テキストを含む,high,No 
+4.2.1,T_plus_reg,-0.1306,0,家電製品,テキストを含む,high,No 
+4.2.1,T_plus_pu,-0.0931,0,家電製品,テキストを含む,low,No 
+4.2.1,T_plus_reg,-0.1231,0,家電製品,テキストを含む,low,No 
+4.2.1,T_plus_pu,-0.1044,0,家電製品,sharpness,high,No 
+4.2.1,T_plus_reg,-0.1242,0,家電製品,sharpness,high,No 
+4.2.1,T_plus_pu,-0.1311,0,家電製品,sharpness,low,No 
+4.2.1,T_plus_reg,-0.1462,0,家電製品,sharpness,low,No 
+4.2.1,T_plus_pu,-0.1273,0,時計,sharpness,high,No 
+4.2.1,T_plus_reg,-0.1291,0,時計,sharpness,high,No 
+4.2.1,T_plus_pu,-0.1299,0,時計,sharpness,low,No 
+4.2.1,T_plus_reg,-0.1412,0,時計,sharpness,low,No 
+4.2.2,eva,-0.171,0.0421,家電製品,テキストを含む,high,Yes
+4.2.2,eva,-0.1663,0.0486,家電製品,テキストを含む,low,Yes
+4.2.2,vit,-0.1521,0.0401,家電製品,テキストを含む,high,Yes
+4.2.2,vit,-0.1535,0.0376,家電製品,テキストを含む,low,Yes
+4.2.2,efficientvit,-0.1492,0.0634,家電製品,テキストを含む,high,Yes
+4.2.2,efficientvit,-0.1403,0.0606,家電製品,テキストを含む,low,Yes
+4.2.2,eva,-0.1835,0.0304,家電製品,sharpness,high,Yes
+4.2.2,eva,-0.1646,0.0504,家電製品,sharpness,low,Yes
+4.2.2,vit,-0.1694,0.0373,家電製品,sharpness,high,Yes
+4.2.2,vit,-0.1552,0.0412,家電製品,sharpness,low,Yes
+4.2.2,efficientvit,-0.1707,0.0706,家電製品,sharpness,high,Yes
+4.2.2,efficientvit,-0.145,0.0616,家電製品,sharpness,low,Yes
+4.2.2,eva,-0.1788,0.0323,時計,sharpness,high,Yes
+4.2.2,eva,-0.1714,0.0314,時計,sharpness,low,Yes
+4.2.2,vit,-0.1898,0.0382,時計,sharpness,high,Yes
+4.2.2,vit,-0.1649,0.0471,時計,sharpness,low,Yes
+4.2.2,efficientvit,-0.172,0.0775,時計,sharpness,high,Yes
+4.2.2,efficientvit,-0.1586,0.0818,時計,sharpness,low,Yes
+4.2.3,eva,-0.0803,0.0537,家電製品,テキストを含む,high,No 
+4.2.3,eva,-0.0912,0.0559,家電製品,テキストを含む,low,No 
+4.2.3,vit,-0.1028,0.0465,家電製品,テキストを含む,high,No 
+4.2.3,vit,-0.1114,0.0439,家電製品,テキストを含む,low,No 
+4.2.3,efficientvit,-0.1329,0.0886,家電製品,テキストを含む,high,No 
+4.2.3,efficientvit,-0.1298,0.0832,家電製品,テキストを含む,low,No 
+4.2.3,eva,-0.064,0.039,家電製品,sharpness,high,No 
+4.2.3,eva,-0.099,0.0564,家電製品,sharpness,low,No 
+4.2.3,vit,-0.0407,0.0573,家電製品,sharpness,high,No 
+4.2.3,vit,-0.1111,0.0492,家電製品,sharpness,low,No 
+4.2.3,efficientvit,-0.1449,0.0898,家電製品,sharpness,high,No 
+4.2.3,efficientvit,-0.1285,0.0864,家電製品,sharpness,low,No 
+4.2.3,eva,-0.1116,0.0316,時計,sharpness,high,No 
+4.2.3,eva,-0.0775,0.0348,時計,sharpness,low,No 
+4.2.3,vit,-0.0993,0.0316,時計,sharpness,high,No 
+4.2.3,vit,-0.0697,0.0481,時計,sharpness,low,No 
+4.2.3,efficientvit,-0.1753,0.0959,時計,sharpness,high,No 
+4.2.3,efficientvit,-0.1548,0.0968,時計,sharpness,low,No 
+4.2.4,eva + T_plus_pu,-0.1285,0.0381,家電製品,テキストを含む,high,Yes
+4.2.4,eva + T_plus_pu,-0.1313,0.0304,家電製品,テキストを含む,low,Yes
+4.2.4,vit + T_plus_pu,-0.1252,0.0429,家電製品,テキストを含む,high,Yes
+4.2.4,vit + T_plus_pu,-0.1064,0.0481,家電製品,テキストを含む,low,Yes
+4.2.4,efficientvit + T_plus_pu,-0.1119,0.0932,家電製品,テキストを含む,high,Yes
+4.2.4,efficientvit + T_plus_pu,-0.1145,0.0818,家電製品,テキストを含む,low,Yes
+4.2.4,eva + T_plus_pu,-0.1543,0.0352,家電製品,sharpness,high,Yes
+4.2.4,eva + T_plus_pu,-0.1146,0.0352,家電製品,sharpness,low,Yes
+4.2.4,vit + T_plus_pu,-0.1677,0.0352,家電製品,sharpness,high,Yes
+4.2.4,vit + T_plus_pu,-0.1026,0.0441,家電製品,sharpness,low,Yes
+4.2.4,efficientvit + T_plus_pu,-0.1487,0.0787,家電製品,sharpness,high,Yes
+4.2.4,efficientvit + T_plus_pu,-0.0949,0.0901,家電製品,sharpness,low,Yes
+4.2.4,eva + T_plus_pu,-0.1362,0.0299,時計,sharpness,high,Yes
+4.2.4,eva + T_plus_pu,-0.1128,0.0395,時計,sharpness,low,Yes
+4.2.4,vit + T_plus_pu,-0.1328,0.0396,時計,sharpness,high,Yes
+4.2.4,vit + T_plus_pu,-0.108,0.0373,時計,sharpness,low,Yes
+4.2.4,efficientvit + T_plus_pu,-0.1202,0.072,時計,sharpness,high,Yes
+4.2.4,efficientvit + T_plus_pu,-0.1089,0.0849,時計,sharpness,low,Yes
+4.2.4,eva + T_plus_reg,-0.1549,0.0451,家電製品,テキストを含む,high,Yes
+4.2.4,eva + T_plus_reg,-0.1446,0.038,家電製品,テキストを含む,low,Yes
+4.2.4,vit + T_plus_reg,-0.1578,0.0362,家電製品,テキストを含む,high,Yes
+4.2.4,vit + T_plus_reg,-0.1596,0.0427,家電製品,テキストを含む,low,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1454,0.0654,家電製品,テキストを含む,high,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1246,0.0785,家電製品,テキストを含む,low,Yes
+4.2.4,eva + T_plus_reg,-0.205,0.0291,家電製品,sharpness,high,Yes
+4.2.4,eva + T_plus_reg,-0.1487,0.0398,家電製品,sharpness,low,Yes
+4.2.4,vit + T_plus_reg,-0.2102,0.0351,家電製品,sharpness,high,Yes
+4.2.4,vit + T_plus_reg,-0.145,0.0398,家電製品,sharpness,low,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1839,0.074,家電製品,sharpness,high,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1238,0.0743,家電製品,sharpness,low,Yes
+4.2.4,eva + T_plus_reg,-0.1254,0.0397,時計,sharpness,high,Yes
+4.2.4,eva + T_plus_reg,-0.1381,0.0462,時計,sharpness,low,Yes
+4.2.4,vit + T_plus_reg,-0.1194,0.0461,時計,sharpness,high,Yes
+4.2.4,vit + T_plus_reg,-0.1104,0.0437,時計,sharpness,low,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1231,0.072,時計,sharpness,high,Yes
+4.2.4,efficientvit + T_plus_reg,-0.1241,0.0902,時計,sharpness,low,Yes
+4.2.5,eva,-0.0711,0.0453,家電製品,テキストを含む,high,No 
+4.2.5,eva,-0.0846,0.0495,家電製品,テキストを含む,low,No 
+4.2.5,vit,-0.087,0.0568,家電製品,テキストを含む,high,No 
+4.2.5,vit,-0.0963,0.0548,家電製品,テキストを含む,low,No 
+4.2.5,efficientvit,-0.1336,0.1186,家電製品,テキストを含む,high,No 
+4.2.5,efficientvit,-0.1254,0.1118,家電製品,テキストを含む,low,No 
+4.2.5,eva,-0.0709,0.0442,家電製品,sharpness,high,No 
+4.2.5,eva,-0.0873,0.0514,家電製品,sharpness,low,No 
+4.2.5,vit,-0.0403,0.0553,家電製品,sharpness,high,No 
+4.2.5,vit,-0.0911,0.0581,家電製品,sharpness,low,No 
+4.2.5,efficientvit,-0.1691,0.1142,家電製品,sharpness,high,No 
+4.2.5,efficientvit,-0.1329,0.1116,家電製品,sharpness,low,No 
+4.2.5,eva,-0.107,0.0326,時計,sharpness,high,No 
+4.2.5,eva,-0.0621,0.0439,時計,sharpness,low,No 
+4.2.5,vit,-0.0985,0.0379,時計,sharpness,high,No 
+4.2.5,vit,-0.0526,0.0408,時計,sharpness,low,No 
+4.2.5,efficientvit,-0.1627,0.1076,時計,sharpness,high,No 
+4.2.5,efficientvit,-0.1358,0.1104,時計,sharpness,low,No 
+4.2.5,eva,-0.1597,0.0465,家電製品,テキストを含む,high,Yes
+4.2.5,eva,-0.1527,0.0496,家電製品,テキストを含む,low,Yes
+4.2.5,vit,-0.1494,0.0397,家電製品,テキストを含む,high,Yes
+4.2.5,vit,-0.1509,0.0327,家電製品,テキストを含む,low,Yes
+4.2.5,efficientvit,-0.1397,0.0962,家電製品,テキストを含む,high,Yes
+4.2.5,efficientvit,-0.1318,0.0938,家電製品,テキストを含む,low,Yes
+4.2.5,eva,-0.1839,0.0257,家電製品,sharpness,high,Yes
+4.2.5,eva,-0.1589,0.0449,家電製品,sharpness,low,Yes
+4.2.5,vit,-0.1715,0.0389,家電製品,sharpness,high,Yes
+4.2.5,vit,-0.1584,0.0317,家電製品,sharpness,low,Yes
+4.2.5,efficientvit,-0.1725,0.0928,家電製品,sharpness,high,Yes
+4.2.5,efficientvit,-0.137,0.091,家電製品,sharpness,low,Yes
+4.2.5,eva,-0.1814,0.0254,時計,sharpness,high,Yes
+4.2.5,eva,-0.1642,0.0307,時計,sharpness,low,Yes
+4.2.5,vit,-0.1643,0.0365,時計,sharpness,high,Yes
+4.2.5,vit,-0.1348,0.0294,時計,sharpness,low,Yes
+4.2.5,efficientvit,-0.1624,0.0946,時計,sharpness,high,Yes
+4.2.5,efficientvit,-0.1454,0.093,時計,sharpness,low,Yes

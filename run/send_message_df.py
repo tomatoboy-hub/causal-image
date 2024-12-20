@@ -47,10 +47,10 @@ def main(cfg: DictConfig) -> None:
     # yamlデータを読み込む
     with open(yaml_path, 'r') as yml:
         yaml_data = yaml.safe_load(yml)
-    for treat in ["T_proxy" ,"T_plus_pu", "T_plus_reg"]:
+    for treat in ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv", "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv"]:
         eva_ate, vit_ate, eff_ate = [], [], []
         for k, v in yaml_data.items():
-            if v["treatment_column"] != treat:
+            if v["desc"] != treat:
                 continue
             if v['model_name'] == 'timm/eva02_tiny_patch14_224.mim_in22k':
                 eva_ate.append(v['ATE'])
@@ -65,25 +65,25 @@ def main(cfg: DictConfig) -> None:
         eff_stats = f"eff_ate: mean={np.mean(eff_ate):.4f}, std={np.std(eff_ate):.4f}"
 
         # ATE_unadjusted, ATE_adjustedを計算
-        df = pd.read_csv(csv_path)
+        df = pd.read_csv(treat)
         treatment = "light_or_dark"
         confounder = cfg["confounds_column"]
         outcome = cfg["outcome_column"]
         T_proxy = "T_proxy"
-        T_boost = treat
+        #T_boost = treat
 
         unadjusted_ate = ATE_unadjusted(df[T_proxy], df[outcome])
         adjusted_ate = ATE_adjusted(df[confounder], df[treatment], df[outcome])
-        T_boost_ate = ATE_adjusted(df[confounder], df[T_boost], df[outcome])
+        #T_boost_ate = ATE_adjusted(df[confounder], df[T_boost], df[outcome])
 
         unadjusted_stats = f"ATE_unadjusted: {unadjusted_ate:.4f}"
         adjusted_stats = f"ATE_adjusted: {adjusted_ate:.4f}"
-        T_boost_stats = f"ATE_adjusted({treat}): {T_boost_ate:.4f}"
+        #T_boost_stats = f"ATE_adjusted({treat}): {T_boost_ate:.4f}"
 
         # メール本文を作成
         email_body += "\n".join([
             "パラメータ:",
-            f"treat={treat}",
+            f"df={treat}",
             "ATE統計情報:",
             eva_stats,
             vit_stats,
@@ -92,7 +92,6 @@ def main(cfg: DictConfig) -> None:
             "ATE分析:",
             unadjusted_stats,
             adjusted_stats,
-            T_boost_stats,
         ])
 
     # メールを送信

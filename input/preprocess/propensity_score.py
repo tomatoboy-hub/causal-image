@@ -143,7 +143,7 @@ def adjust_propensity(df, target_propensities,true_propensities):
     return df
 
 if __name__ == "__main__":
-    csv_path = "./processed_base/Watch_preprocess_1206_sharpness.csv"
+    csv_path = "./processed_base/Appliances_preprocess_1130_sharpness.csv"
     confounder = "sharpness_ave"
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
@@ -155,6 +155,6 @@ if __name__ == "__main__":
     df = adjust_precision_recall(df, target_precision=0.94, target_recall=0.98)
     print(df[df[treatment] == 1]["outcome"].sum()/ len(df[df[treatment] == 1]))
     print(df[df[treatment] == 0]["outcome"].sum()/ len(df[df[treatment] == 0]))
-    df.to_csv(f"./modelinput/Watch_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1206.csv", index = None)
+    df.to_csv(f"./modelinput/Watch_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1210.csv", index = None)
     print("ATE_unadjusted: ", ATE_unadjusted(df["T_proxy"], df["outcome"]))
     print("ATE_adjusted: ", ATE_adjusted(df[confounder], df[treatment],df["outcome"]))

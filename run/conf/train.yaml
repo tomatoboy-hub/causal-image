@@ -12,22 +12,21 @@ learning_rate: 2e-5
 sampler: weighted
 
 
-df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv
+df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
 image_column: "img_path"
-confounds_column: "contains_text"
+confounds_column: "sharpness_ave"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[1216]seed_everything_appliances_watch_contains_text_aug_no_maskloss.yaml
-description: "??,con:contains_text, treat:??, confound: ??, aug Yes maskloss"
-
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[0104]seed_everything_appandwatch_sharpness_ave_noise_none_smallaug.yaml
+description: "??,con:sharpness_ave, treat:??, confound: ?? ,noise:none,small_aug"
 
 
 batch_size: ${batch_size}
 num_workers: 31
 epoch: ${epoch}
 seed: ${seed}
-augmentation: False
-use_mask_loss: True
+augmentation: True
+use_mask_loss: False
 mask_ratio: 0.1
 
 total_training_steps: ??? 

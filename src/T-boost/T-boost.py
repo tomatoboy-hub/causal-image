@@ -96,4 +96,13 @@ def run_parameterized_estimators(
     return None
 
 if __name__ == "__main__":
-    run_parameterized_estimators("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/Watch_preprocess_sharpness_ave_t0.8c0.8_1210.csv")
+    dfs = [
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221.csv"
+    ]
+    for df in dfs:
+        run_parameterized_estimators(df)

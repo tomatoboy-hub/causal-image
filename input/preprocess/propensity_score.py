@@ -143,18 +143,19 @@ def adjust_propensity(df, target_propensities,true_propensities):
     return df
 
 if __name__ == "__main__":
-    csv_path = "./processed_base/Appliances_preprocess_1130_sharpness.csv"
+    csv_path = "./processed_base/Watch_preprocess_1206_sharpness.csv"
     confounder = "sharpness_ave"
     treatment = "light_or_dark"
     df = pd.read_csv(csv_path)
     probability_0, probability_1 = calculate_propensity_score(df, confounder, treatment)
     #df = adjust_propensity(df,[0.8, 0.7],[probability_0,probability_1])
     treatment_strength =0.8
-    confounding_strength = 0.8
-    df = make_price_dark_probs(df,treatment_strength, confounding_strength,probability_0,probability_1,0.0,"simple", 0)
+    confounding_strength = 10.0
+    noise_level = 0.5
+    df = make_price_dark_probs(df,treatment_strength, confounding_strength,probability_0,probability_1,noise_level,"simple", 0)
     df = adjust_precision_recall(df, target_precision=0.94, target_recall=0.98)
     print(df[df[treatment] == 1]["outcome"].sum()/ len(df[df[treatment] == 1]))
     print(df[df[treatment] == 0]["outcome"].sum()/ len(df[df[treatment] == 0]))
-    df.to_csv(f"./modelinput/Watch_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_1210.csv", index = None)
+    df.to_csv(f"./modelinput/Watch_preprocess_{confounder}_t{treatment_strength}c{confounding_strength}_noise{noise_level}_1221.csv", index = None)
     print("ATE_unadjusted: ", ATE_unadjusted(df["T_proxy"], df["outcome"]))
     print("ATE_adjusted: ", ATE_adjusted(df[confounder], df[treatment],df["outcome"]))

@@ -2,6 +2,25 @@ import random
 import numpy as np
 import torch
 import yaml
+from collections import defaultdict
+
+# 関数定義
+def ATE_unadjusted(T, Y):
+    x = defaultdict(list)
+    for t, y in zip(T, Y):
+        x[t].append(y)
+    T0 = np.mean(x[0])
+    T1 = np.mean(x[1])
+    return T0 - T1
+
+def ATE_adjusted(C, T, Y):
+    x = defaultdict(list)
+    for c, t, y in zip(C, T, Y):
+        x[c, t].append(y)
+
+    C0_ATE = np.mean(x[0, 0]) - np.mean(x[0, 1])
+    C1_ATE = np.mean(x[1, 0]) - np.mean(x[1, 1])
+    return np.mean([C0_ATE, C1_ATE])
 
 def set_seed(seed: int):
     random.seed(seed)
@@ -14,7 +33,7 @@ def set_seed(seed: int):
         torch.backends.cudnn.benchmark = False
 
 
-def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,seed,ATE,desc="",treatment_column=""):
+def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,seed,ATE,desc="",treatment_column="",ATE_unadj=0,ATE_adj=0):
     new_entry = {
         exp_name: {
             "seed": seed,
@@ -23,7 +42,9 @@ def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,s
             "epochs": epochs,
             "ATE": ATE,
             "desc":desc,
-            "treatment_column":treatment_column
+            "treatment_column":treatment_column,
+            "ATE_unadjusted": ATE_unadj,  
+            "ATE_adjusted": ATE_adj
         }
     }
 

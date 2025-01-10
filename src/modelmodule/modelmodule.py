@@ -113,9 +113,9 @@ class ImageCausalModel(LightningModule):
         self.Q_losses.clear()
         self.mask_losses.clear()
         return 
-    """
+
     def validation_step(self,batch,batch_idx):
-        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss = self.forward(batch, batch_idx)
+        g_prob, Q_prob_T0, Q_prob_T1, g_loss, Q_loss,masking_loss= self.forward(batch, batch_idx)
         self.Q0s += Q_prob_T0.detach().cpu().numpy().tolist()
         self.Q1s += Q_prob_T1.detach().cpu().numpy().tolist()
         loss = (self.cfg.loss_weights["g"] * g_loss + 
@@ -128,7 +128,7 @@ class ImageCausalModel(LightningModule):
         preds = np.argmax(probs,axis = 1)
 
         return probs,preds
-    """
+    
     def predict_step(self,batch,batch_idx):
         self.eval()
         images, confounds, treatment, true_labels = batch
@@ -145,15 +145,8 @@ class ImageCausalModel(LightningModule):
         probs = np.array(list(zip(self.Q0s, self.Q1s)))
         preds = np.argmax(probs,axis = 1)
         self.ate_value = self.ATE(probs)
-
-        accuracy = accuracy_score(self.true_labels, preds)
-        precision = precision_score(self.true_labels, preds)
-        recall = recall_score(self.true_labels, preds)
-        f1 = f1_score(self.true_labels, preds)
-        df = pd.DataFrame({"Q0s":self.Q0s,"Q1s":self.Q1s,"preds": preds, "true_labels": self.true_labels})
-        df.to_csv("/root/graduation_thetis/causal-bert-pytorch/run/result/predict.csv")
-        self.logger.experiment.log({"ATE": self.ate_value, "accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1})
-        print(f"ATE: {self.ate_value}, Accuracy: {accuracy}, Precision: {precision}, Recall: {recall}, F1: {f1}")
+        self.logger.experiment.log({"ATE": self.ate_value})
+        print(len(self.true_labels))
         return {"probs": probs, "preds": preds}
     
     def ATE(self,probs):

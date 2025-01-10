@@ -39,27 +39,33 @@ def main(cfg: DictConfig) -> None:
     # train.yamlからファイルパスを取得
     with open("/root/graduation_thetis/causal-bert-pytorch/run/conf/train.yaml", 'r') as yml:
         train_config = yaml.safe_load(yml)
-
-    # treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
-    #  "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv",
-    #  "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
-    #  "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
-    #  ]
-    #treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv"]
+    
+    if cfg.confounds_column == "sharpness_ave":
+        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
+        ]
+        yaml_path = cfg["file_name_T"]
+    elif cfg.confounds_column == "contains_text":
+        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv",
+                  "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv"]    
+        yaml_path = cfg["file_name_C"]
     # treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv",
     # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202-T_boost.csv",
     # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_1206-T_boost.csv",
     # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
     # ]
-    treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv"]
-    yaml_path = cfg["file_name"]
+    #treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv"]
     csv_path = cfg["df_path"]
     description = cfg["description"]
     email_body = f"description:{description}\n"
+
     # yamlデータを読み込む
     with open(yaml_path, 'r') as yml:
         yaml_data = yaml.safe_load(yml)
     for treat in treats:
+        truth_result = defaultdict()
         eva_ate, vit_ate, eff_ate = [], [], []
         for k, v in yaml_data.items():
             if v["desc"] != treat:
@@ -70,13 +76,16 @@ def main(cfg: DictConfig) -> None:
                 eff_ate.append(v['ATE'])
             elif v['model_name'] == 'timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k':
                 vit_ate.append(v['ATE'])
+            truth_result[f"{treat}_unadj"] = v["ATE_unadj"]
+            truth_result[f"{treat}_adj"] = v["ATE_adj"]
+            
 
         # ATEの統計量を計算
         eva_stats = f"eva_ate: mean={np.mean(eva_ate):.4f}, std={np.std(eva_ate):.4f}"
         vit_stats = f"vit_ate: mean={np.mean(vit_ate):.4f}, std={np.std(vit_ate):.4f}"
         eff_stats = f"eff_ate: mean={np.mean(eff_ate):.4f}, std={np.std(eff_ate):.4f}"
-
         # ATE_unadjusted, ATE_adjustedを計算
+        """
         df = pd.read_csv(treat)
         treatment = "light_or_dark"
         confounder = cfg["confounds_column"]
@@ -91,7 +100,7 @@ def main(cfg: DictConfig) -> None:
         unadjusted_stats = f"ATE_unadjusted: {unadjusted_ate:.4f}"
         adjusted_stats = f"ATE_adjusted: {adjusted_ate:.4f}"
         #T_boost_stats = f"ATE_adjusted({treat}): {T_boost_ate:.4f}"
-
+        """
         # メール本文を作成
         email_body += "\n".join([
             "パラメータ:",
@@ -102,8 +111,8 @@ def main(cfg: DictConfig) -> None:
             eff_stats,
             "",
             "ATE分析:",
-            unadjusted_stats,
-            adjusted_stats,
+            truth_result[f"{treat}_unadj"],
+            truth_result[f"{treat}_adj"],
         ])
 
     # メールを送信

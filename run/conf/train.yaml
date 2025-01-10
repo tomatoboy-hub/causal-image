@@ -10,6 +10,7 @@ loss_weights:
 CUDA: True
 learning_rate: 2e-5
 sampler: weighted
+n_splits: 2
 
 
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
@@ -17,12 +18,13 @@ image_column: "img_path"
 confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[0107]seed_everything_appandwatch_contains_text_noise_none_smallaug.yaml
-description: "??,con:contains_text, treat:??, confound: ?? ,noise:none,small_aug"
+file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0110]seed_3_appandwatch_sharpness_ave_noise_aug.yaml
+file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0110]seed_3_app_contains_text_noise_aug_.yaml
+description: "??,con:contains_text, treat:??, confound: ?? ,noise:Yes,aug: yes"
 
 
 batch_size: ${batch_size}
-num_workers: 31
+num_workers: 0
 epoch: ${epoch}
 seed: ${seed}
 augmentation: True

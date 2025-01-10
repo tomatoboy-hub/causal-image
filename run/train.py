@@ -10,7 +10,7 @@ import hydra
 from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
 from src.utils.common import set_seed, save_experiment_result
-rom sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
@@ -18,6 +18,8 @@ def main(cfg:DictConfig):
     set_seed(cfg.seed)
     df = pd.read_csv(cfg.df_path)
     #df["light_or_dark"] = df["light_or_dark"].apply(lambda x : 1 if x == "light" else 0)
+    
+
     
     data_module = CausalImageDataModule(cfg,df)
     train_dataset_size = len(data_module.train_dataset)

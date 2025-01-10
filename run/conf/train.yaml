@@ -14,11 +14,11 @@ sampler: weighted
 
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
 image_column: "img_path"
-confounds_column: "sharpness_ave"
+confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[0104]seed_everything_appandwatch_sharpness_ave_noise_none_smallaug.yaml
-description: "??,con:sharpness_ave, treat:??, confound: ?? ,noise:none,small_aug"
+file_name: /root/graduation_thetis/causal-bert-pytorch/run/result/[0107]seed_everything_appandwatch_contains_text_noise_none_smallaug.yaml
+description: "??,con:contains_text, treat:??, confound: ?? ,noise:none,small_aug"
 
 
 batch_size: ${batch_size}

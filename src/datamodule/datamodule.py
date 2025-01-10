@@ -22,27 +22,27 @@ class CausalImageDataset(Dataset):
             ]
         )
         if cfg.augmentation:
-            # self.transform = A.Compose([
-            #     A.RandomBrightnessContrast(brightness_limit=(-0.2, 0.2), contrast_limit=(-0.2, 0.2), p=0.5),
-            #     A.OneOf([
-            #         A.MotionBlur(blur_limit=5),
-            #         A.MedianBlur(blur_limit=5),
-            #         A.GaussianBlur(blur_limit=5),
-            #         A.GaussNoise(var_limit=(5.0, 30.0)),
-            #     ], p=0.5),
+            self.transform = A.Compose([
+                A.RandomBrightnessContrast(brightness_limit=(-0.2, 0.2), contrast_limit=(-0.2, 0.2), p=0.5),
+                A.OneOf([
+                    A.MotionBlur(blur_limit=5),
+                    A.MedianBlur(blur_limit=5),
+                    A.GaussianBlur(blur_limit=5),
+                    A.GaussNoise(var_limit=(5.0, 30.0)),
+                ], p=0.5),
 
-            #     A.OneOf([
-            #         A.OpticalDistortion(distort_limit=1.0),
-            #         A.GridDistortion(num_steps=5, distort_limit=1.),
-            #         A.ElasticTransform(alpha=3),
-            #     ], p=0.5),
+                A.OneOf([
+                    A.OpticalDistortion(distort_limit=1.0),
+                    A.GridDistortion(num_steps=5, distort_limit=1.),
+                    A.ElasticTransform(alpha=3),
+                ], p=0.5),
 
-            #     A.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=15, border_mode=0, p=0.5),
-            #     A.Resize(224, 224),
-            #     A.CoarseDropout(max_holes=16, max_height=64, max_width=64, min_holes=1, min_height=8, min_width=8, p=0.5),    
-            #     A.Normalize(mean=0.5, std=0.5),
-            #     AT.ToTensorV2()
-            # ])
+                A.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=15, border_mode=0, p=0.5),
+                A.Resize(224, 224),
+                A.CoarseDropout(max_holes=16, max_height=64, max_width=64, min_holes=1, min_height=8, min_width=8, p=0.5),    
+                A.Normalize(mean=0.5, std=0.5),
+                AT.ToTensorV2()
+            ])
             self.transform = A.Compose([
                 A.OneOf([
                      A.MotionBlur(blur_limit=5),
@@ -133,12 +133,16 @@ class CausalImageDataset(Dataset):
         outcome = self.outcomes[idx] if self.outcomes is not None else -1
         return image, confounds, treatment, outcome
 """
+
+
 class CausalImageDataModule(LightningDataModule):
     def __init__(self,cfg:DictConfig,df):
         super().__init__()
         self.cfg = cfg
         self.df = df
+
         self.train_dataset = CausalImageDataset(cfg = self.cfg,df = self.df)
+        self.valid_dataset = CausalImageDataset_validation(cfg = self.cfg,df = self.df)
         self.predict_dataset = CausalImageDataset_validation(cfg = self.cfg,df = self.df)
     def train_dataloader(self):
         if self.cfg.sampler == "weighted":
@@ -160,7 +164,7 @@ class CausalImageDataModule(LightningDataModule):
         )
         return train_loader
     
-    """
+
     def val_dataloader(self):
         valid_loader = DataLoader(
             self.valid_dataset,
@@ -169,7 +173,6 @@ class CausalImageDataModule(LightningDataModule):
             num_workers = self.cfg.num_workers
         )
         return valid_loader
-    """ 
     def predict_dataloader(self):
         sampler = SequentialSampler(self.train_dataset)
         predict_loader = DataLoader(

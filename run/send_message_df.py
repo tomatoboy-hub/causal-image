@@ -46,11 +46,12 @@ def main(cfg: DictConfig) -> None:
     #  "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
     #  ]
     #treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv"]
-    treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv",
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202-T_boost.csv",
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_1206-T_boost.csv",
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
-    ]
+    # treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv",
+    # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202-T_boost.csv",
+    # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_1206-T_boost.csv",
+    # "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
+    # ]
+    treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv"]
     yaml_path = cfg["file_name"]
     csv_path = cfg["df_path"]
     description = cfg["description"]

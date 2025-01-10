@@ -13,13 +13,13 @@ seeds=(42 123 456 789 1011 1213 1415 1617 1819 2021 2223 2425 2627 2829 3031 323
 #      "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv"
 #      "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
 #      ) 
-# dfs=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv" 
-#     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv")
-dfs=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv"
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202-T_boost.csv"
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_1206-T_boost.csv"
-    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
-    )
+dfs=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv" 
+    "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv")
+# dfs=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv"
+#     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c10.0_1202-T_boost.csv"
+#     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_1206-T_boost.csv"
+#     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
+#     )
 
 #dfs=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv" "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv")
 # 初期のexp_idを設定

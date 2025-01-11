@@ -52,8 +52,10 @@ def main(cfg:DictConfig):
     trainer.predict(model, dataloaders=data_module.predict_dataloader())
     ATE_value = model.ate_value
     print(ATE_value)
-    ATE_unadj = ATE_unadjusted(predict_df[cfg.treatments_column], predict_df[cfg.outcome_column])
-    ATE_adj = ATE_adjusted(predict_df[cfg.treatments_column], predict_df[cfg.outcome_column], predict_df[cfg.confounds_column])
+    ate_unadj = ATE_unadjusted(predict_df[cfg.treatments_column], predict_df[cfg.outcome_column])
+    ate_adj = ATE_adjusted(predict_df[cfg.treatments_column], predict_df[cfg.outcome_column], predict_df[cfg.confounds_column])
+    ate_unadj = float(ate_unadj)
+    ate_adj = float(ate_adj)
     if cfg.confounds_column == "sharpness_ave":
         file_path = cfg.file_name_T
     elif cfg.confounds_column == "contains_text":
@@ -69,8 +71,8 @@ def main(cfg:DictConfig):
         ATE=float(ATE_value),
         desc=cfg.df_path,
         treatment_column=cfg.treatments_column,
-        ATE_unadj=ATE_unadj,
-        ATE_adj=ATE_adj
+        ATE_unadj=ate_unadj,
+        ATE_adj=ate_adj
     )
 
 

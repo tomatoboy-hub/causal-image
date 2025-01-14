@@ -53,7 +53,7 @@ for model in "${pretrained_models[@]}"; do
     done
 done
 
-python send_message_df.py 
+python send_message_df.py confounds_column="sharpness_ave"
 
 exp_id=1
 # パラメータの組み合わせでループを回して実行
@@ -83,4 +83,4 @@ for model in "${pretrained_models[@]}"; do
     done
 done
 
-python send_message_df.py 
+python send_message_df.py confounds_column="contains_text"

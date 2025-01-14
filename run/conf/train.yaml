@@ -16,18 +16,18 @@ n_splits: 2
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
 image_column: "img_path"
 confounds_column: "contains_text"
-treatments_column: "T_proxy"
+treatments_column: "T_plus_pu"
 outcome_column: "outcome"
-file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0111]seed_3_appandwatch_sharpness_ave_noise_aug_none.yaml
-file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0111]seed_3_app_contains_text_noise_aug_none.yaml
-description: "??,con:contains_text, treat:??, confound: ?? ,noise:Yes,aug: yes"
+file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0114]seed_3_appandwatch_sharpness_ave_noise_normal_aug_T_pu.yaml
+file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0114]seed_3_app_contains_text_noise_normal_aug_T_pu.yaml
+description: "??,con:contains_sharp, treat:T_plus_reg, confound: ?? ,noise:Yes,aug: yes"
 
 
 batch_size: ${batch_size}
 num_workers: 4
 epoch: ${epoch}
 seed: ${seed}
-augmentation: False
+augmentation: True
 use_mask_loss: False
 mask_ratio: 0.1
 

@@ -40,15 +40,13 @@ def main(cfg: DictConfig) -> None:
     with open("/root/graduation_thetis/causal-bert-pytorch/run/conf/train.yaml", 'r') as yml:
         train_config = yaml.safe_load(yml)
     if cfg.confounds_column == "sharpness_ave":
-        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
-        ]
+        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv",
+     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv"
+     ]
         yaml_path = cfg["file_name_T"]
     elif cfg.confounds_column == "contains_text":
-        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv",
-                 "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv"] 
+        treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv",
+                   "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv"] 
         #treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv","/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv"]   
         yaml_path = cfg["file_name_C"]
     # treats = ["/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_sharpness_ave_t0.8c0.8_1210-T_boost.csv",

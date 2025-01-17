@@ -26,8 +26,8 @@ def get_data(df,image_dir):
     return df
 
 if __name__ == "__main__":
-    image_dir = "/root/graduation_thetis/causal-bert-pytorch/input/watch_images/"
-    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/Watches.csv"
+    image_dir = "/root/graduation_thetis/causal-bert-pytorch/input/shoes_imgs/"
+    csv_path = "/root/graduation_thetis/causal-bert-pytorch/input/Casual Shoes.csv"
     df = pd.read_csv(csv_path)
     df = get_data(df,image_dir)
-    df.to_csv("./watch_img.csv",index = None)
+    df.to_csv("./Casual Shoes_img.csv",index = None)

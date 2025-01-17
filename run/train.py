@@ -9,7 +9,7 @@ import torch
 import hydra
 from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
-from src.utils.common import set_seed, save_experiment_result
+from src.utils.common import set_seed, save_experiment_result,save_experiment_result_to_csv
 from sklearn.model_selection import train_test_split
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
@@ -73,6 +73,7 @@ def main(cfg:DictConfig):
         desc=cfg.df_path,
         treatment_column=cfg.treatments_column
     )
+
 
 
 

@@ -33,7 +33,7 @@ def prepare_covariates(df, model_name="resnet18"):
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     ])
-    dataset = ImageDataset(df, "img_path",transform=transform)
+    dataset = ImageDataset(df, "file_path",transform=transform)
     dataloader = DataLoader(dataset, batch_size=32, shuffle=False)
     model = timm.create_model(model_name, pretrained=True,num_classes=0)
     model.eval()
@@ -97,12 +97,12 @@ def run_parameterized_estimators(
 
 if __name__ == "__main__":
     dfs = [
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221.csv",
-        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221.csv"
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_sharpness_ave_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_sharpness_ave_t0.8c10.0_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_is_shoe_t0.8c0.8_noise0.5_1221.csv",
+        "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/ShoesCloth_is_shoe_t0.8c10.0_noise0.5_1221.csv"
     ]
     for df in dfs:
         run_parameterized_estimators(df)

@@ -10,17 +10,18 @@ loss_weights:
 CUDA: True
 learning_rate: 2e-5
 sampler: weighted
-n_splits: 2
-
+n_splits: 5
 
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
-image_column: "img_path"
+image_column: "file_path"
 confounds_column: "contains_text"
-treatments_column: "T_plus_pu"
+treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0114]seed_3_appandwatch_sharpness_ave_noise_normal_aug_T_pu.yaml
-file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0114]seed_3_app_contains_text_noise_normal_aug_T_pu.yaml
-description: "??,con:contains_sharp, treat:T_plus_reg, confound: ?? ,noise:Yes,aug: yes"
+file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0117]seed_10_shocloth_sharpness_ave_noise_normal_aug_nottest.yaml
+file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0117]seed_10_shocloth_contains_text_noise_normal_aug_nottest.yaml
+csv_path_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0117]seed_10_shocloth_sharpness_ave_noise_normal_aug_not_test.csv
+csv_path_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0117]seed_10_shocloth__contains_text_noise_normal_aug_not_test.csv
+description: "shose_cloth,con:??, treat:?? , confound: ?? ,noise:Yes,aug: yes"
 
 
 batch_size: ${batch_size}

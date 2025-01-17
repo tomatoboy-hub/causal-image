@@ -8,10 +8,8 @@ pretrained_models=("timm/eva02_tiny_patch14_224.mim_in22k" "timm/efficientvit_m2
 batch_sizes=(32)
 epochs=(3)
 seeds=(42 123 456 789 1000 2000 3000 4000 5000 6000)  
-dfs_S=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv"
-     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv"
-     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv"
-     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
+dfs_S=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_sharpness_ave_t0.8c10.0_noise0.5_1221-T_boost.csv"
+     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_sharpness_ave_t0.8c0.8_noise0.5_1221-T_boost.csv"
      ) 
 # dfs_C=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_contains_text_t0.8c0.8_1203-T_boost.csv" 
 #      "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Appliances_preprocess_containstext_t0.8c10.0_1202-T_boost.csv")
@@ -21,7 +19,7 @@ dfs_S=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boo
 #     "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/T-boost/Watch_preprocess_sharpness_ave_t0.8c10.0_1206-T_boost.csv"
 #     )
 
-dfs_C=("/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv" "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv")
+dfs_C=(/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv "/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv" )
 # 初期のexp_idを設定
 exp_id=1
 
@@ -33,7 +31,7 @@ for model in "${pretrained_models[@]}"; do
             for seed in "${seeds[@]}"; do
                 for df in "${dfs_S[@]}"; do
                 # Hydraの設定をオーバーライドして実行
-                    python train_fold.py \
+                    python train_test.py \
                         pretrained_model=$model \
                         batch_size=$batch_size \
                         epoch=$epoch \
@@ -63,7 +61,7 @@ for model in "${pretrained_models[@]}"; do
             for seed in "${seeds[@]}"; do
                 for df in "${dfs_C[@]}"; do
                 # Hydraの設定をオーバーライドして実行
-                    python train_fold.py \
+                    python train_test.py \
                         pretrained_model=$model \
                         batch_size=$batch_size \
                         epoch=$epoch \

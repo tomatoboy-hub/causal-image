@@ -3,7 +3,8 @@ import numpy as np
 import torch
 import yaml
 from collections import defaultdict
-
+import os
+import csv
 # 関数定義
 def ATE_unadjusted(T, Y):
     x = defaultdict(list)
@@ -63,3 +64,60 @@ def save_experiment_result(file_path, exp_name, model_name, batch_size, epochs,s
     # 変更を保存
     with open(file_path, 'w') as file:
         yaml.dump(existing_data, file)
+def save_experiment_result_to_csv(file_path, 
+                                  exp_name, 
+                                  model_name, 
+                                  batch_size, 
+                                  epochs, 
+                                  seed, 
+                                  ATE, 
+                                  desc="", 
+                                  treatment_column="", 
+                                  confounds_column="",
+                                  ATE_unadj=0, 
+                                  ATE_adj=0):
+
+    # CSVの列名を定義
+    columns = [
+        "exp_name",
+        "seed",
+        "model_name",
+        "batch_size",
+        "epochs",
+        "ATE",
+        "desc",
+        "treatment_column",
+        "confounds_column",
+        "ATE_unadjusted",
+        "ATE_adjusted"
+    ]
+    
+    # 追記する内容を辞書にまとめる
+    new_row = {
+        "exp_name": exp_name,
+        "seed": seed,
+        "model_name": model_name,
+        "batch_size": batch_size,
+        "epochs": epochs,
+        "ATE": ATE,
+        "desc": desc,
+        "treatment_column": treatment_column,
+        "confounds_column": confounds_column,
+        "ATE_unadjusted": ATE_unadj,
+        "ATE_adjusted": ATE_adj
+    }
+    
+    # ファイルの存在有無をチェック
+    file_exists = os.path.exists(file_path)
+    
+    # 'a' モードで開き、既存ファイルがない場合のみヘッダを書き込み
+    with open(file_path, mode='a', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=columns)
+        
+        # CSVがまだ存在しない場合、ヘッダを書き込む
+        if not file_exists:
+            writer.writeheader()
+        
+        # データを書き込む（1行分）
+        writer.writerow(new_row)
+

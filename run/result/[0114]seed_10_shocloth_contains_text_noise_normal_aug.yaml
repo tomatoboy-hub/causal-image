@@ -1,0 +1,580 @@
+exp1:
+  ATE: -0.1887876819983471
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+  treatment_column: T_proxy
+exp10:
+  ATE: -0.17139522626035736
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1000
+  treatment_column: T_proxy
+exp11:
+  ATE: 0.026129316393318298
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2000
+  treatment_column: T_proxy
+exp12:
+  ATE: 0.014561924460842835
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2000
+  treatment_column: T_proxy
+exp13:
+  ATE: -0.0035279553194079816
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3000
+  treatment_column: T_proxy
+exp14:
+  ATE: -0.025147547571045686
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3000
+  treatment_column: T_proxy
+exp15:
+  ATE: 0.007938801143591953
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4000
+  treatment_column: T_proxy
+exp16:
+  ATE: -0.22750748797602804
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4000
+  treatment_column: T_proxy
+exp17:
+  ATE: 0.18623527401795428
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 5000
+  treatment_column: T_proxy
+exp18:
+  ATE: 0.07816110254898241
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 5000
+  treatment_column: T_proxy
+exp19:
+  ATE: -0.09211725128074258
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 6000
+  treatment_column: T_proxy
+exp2:
+  ATE: -0.13298837835670047
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+  treatment_column: T_proxy
+exp20:
+  ATE: -0.23424571591669216
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 6000
+  treatment_column: T_proxy
+exp21:
+  ATE: 0.06872377035329753
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp22:
+  ATE: -0.08027142881364445
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp23:
+  ATE: -0.08591189738594689
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp24:
+  ATE: -0.09860172945426036
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp25:
+  ATE: -0.10627153973915933
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp26:
+  ATE: -0.22030180134866034
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp27:
+  ATE: 0.03692726486523178
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp28:
+  ATE: -0.022206537727208583
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp29:
+  ATE: -0.01483285212055105
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp3:
+  ATE: -0.07520159082218777
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+  treatment_column: T_proxy
+exp30:
+  ATE: -0.203155310612678
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp31:
+  ATE: -0.17452730764210594
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp32:
+  ATE: -0.24518866362092154
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp33:
+  ATE: -0.06168272916238068
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp34:
+  ATE: -0.23213408024749682
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp35:
+  ATE: 0.1784135395083907
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp36:
+  ATE: 0.2576414787439095
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp37:
+  ATE: -0.15072688489907124
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp38:
+  ATE: -0.18231858370378934
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp39:
+  ATE: -0.1927668825142574
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp4:
+  ATE: -0.01564684014174141
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+  treatment_column: T_proxy
+exp40:
+  ATE: -0.206929270887992
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp41:
+  ATE: 0.03357433410870205
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp42:
+  ATE: -0.14405324467697161
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp43:
+  ATE: -0.010343540985700797
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp44:
+  ATE: -0.1990853456299691
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp45:
+  ATE: -0.06585230218653766
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp46:
+  ATE: -0.07924874295862282
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp47:
+  ATE: -0.019847389426971274
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp48:
+  ATE: -0.04162755999081535
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp49:
+  ATE: -0.03457925448429132
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp5:
+  ATE: 0.08493366542344015
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+  treatment_column: T_proxy
+exp50:
+  ATE: -0.18895691883482219
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp51:
+  ATE: -0.03232807857038398
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp52:
+  ATE: -0.12356384687202247
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp53:
+  ATE: 0.0007972714203938534
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp54:
+  ATE: -0.09844843013570197
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp55:
+  ATE: -0.07033221951352779
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp56:
+  ATE: -0.08222860191445006
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp57:
+  ATE: -0.005696046367237679
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp58:
+  ATE: -0.15712871539502388
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp6:
+  ATE: 0.019063252006093986
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+  treatment_column: T_proxy
+exp7:
+  ATE: -0.11693724165499866
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+  treatment_column: T_proxy
+exp8:
+  ATE: -0.2512749590027976
+  ATE_adjusted: -0.0025196310065686194
+  ATE_unadjusted: -0.14617526183216234
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+  treatment_column: T_proxy
+exp9:
+  ATE: -0.14144700748220834
+  ATE_adjusted: 0.008002866358911974
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1000
+  treatment_column: T_proxy

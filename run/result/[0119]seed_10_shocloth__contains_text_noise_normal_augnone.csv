@@ -1,0 +1,2 @@
+exp_name,seed,model_name,batch_size,epochs,ATE,desc,treatment_column,confounds_column,ATE_unadjusted,ATE_adjusted
+exp1,42,timm/eva02_tiny_patch14_224.mim_in22k,32,3,-0.02443101569694156,/root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv,T_proxy,contains_text,-0.11066695240986679,-0.07737378547879642

@@ -1,0 +1,10 @@
+exp1:
+  ATE: -0.02443101569694156
+  ATE_adjusted: -0.07737378547879642
+  ATE_unadjusted: -0.11066695240986679
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/shoclo_T-boost/ShoesCloth_contains_text_t0.8c10.0_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+  treatment_column: T_proxy

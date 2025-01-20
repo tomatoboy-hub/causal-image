@@ -72,7 +72,7 @@ def main(cfg:DictConfig):
         csv_path = cfg.csv_path_C
 
     ate_unadj = ATE_unadjusted(df[cfg.treatments_column], df[cfg.outcome_column])
-    ate_adj = ATE_adjusted(df[cfg.treatments_column], df[cfg.outcome_column],df[cfg.confounds_column])
+    ate_adj = ATE_adjusted(df[cfg.confounds_column],df[cfg.treatments_column], df[cfg.outcome_column])
     ate_unadj = float(ate_unadj)
     ate_adj = float(ate_adj)
 

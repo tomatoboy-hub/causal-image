@@ -31,7 +31,7 @@ for model in "${pretrained_models[@]}"; do
             for seed in "${seeds[@]}"; do
                 for df in "${dfs_S[@]}"; do
                 # Hydraの設定をオーバーライドして実行
-                    python train_test.py \
+                    python train_fold.py \
                         pretrained_model=$model \
                         batch_size=$batch_size \
                         epoch=$epoch \
@@ -61,7 +61,7 @@ for model in "${pretrained_models[@]}"; do
             for seed in "${seeds[@]}"; do
                 for df in "${dfs_C[@]}"; do
                 # Hydraの設定をオーバーライドして実行
-                    python train_test.py \
+                    python train_fold.py \
                         pretrained_model=$model \
                         batch_size=$batch_size \
                         epoch=$epoch \

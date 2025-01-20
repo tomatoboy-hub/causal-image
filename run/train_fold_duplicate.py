@@ -23,6 +23,14 @@ def main(cfg:DictConfig):
                                name = f'{cfg.pretrained_model}-{cfg.batch_size}-{cfg.seed}', 
                                save_dir='logs')
     train, predict_df = train_test_split(df,test_size=0.2, random_state=42, stratify=df[cfg.outcome_column])
+    predict_75, predict_25 = train_test_split(
+    predict_df, 
+    test_size=0.25, 
+    random_state=42, 
+    stratify=predict_df[cfg.outcome_column]
+    )
+    # Step 2: train に predict_df の 75% を結合
+    train = pd.concat([train, predict_75], ignore_index=True)
     for fold, (train_indices, valid_indices) in enumerate(kfold.split(train)):
         print(f"Fold {fold + 1}/{cfg.n_splits}")
         train_df = train.iloc[train_indices]

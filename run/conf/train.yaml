@@ -17,10 +17,10 @@ image_column: "img_path"
 confounds_column: "contains_text"
 treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name_T: /content/causal-image/run/result/[0120]seed_10_appliance_sharpness_ave_noise_aug_test75%.yaml
-file_name_C: /content/causal-image/run/result/[0120]seed_10_appliance_contains_text_noise_aug_test75%.yaml
-csv_path_T: /content/causal-image/run/result/[0120]seed_10_appliance_sharpness_ave_noise_aug_test75%.csv
-csv_path_C: /content/causal-image/run/result/[0120]seed_10_appliance_contains_text_noise_aug_test75%.csv
+file_name_T: /content/causal-image/run/result/[0120]seed_10_appliance_sharpness_ave_noise_aug_test50%.yaml
+file_name_C: /content/causal-image/run/result/[0120]seed_10_appliance_contains_text_noise_aug_test50%.yaml
+csv_path_T: /content/causal-image/run/result/[0120]seed_10_appliance_sharpness_ave_noise_aug_test50%.csv
+csv_path_C: /content/causal-image/run/result/[0120]seed_10_appliance_contains_text_noise_aug_test50%.csv
 description: ",con:??, treat:?? , confound: ?? ,noise:Yes,augnone"
 
 

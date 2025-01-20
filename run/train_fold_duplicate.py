@@ -25,7 +25,7 @@ def main(cfg:DictConfig):
     train, predict_df = train_test_split(df,test_size=0.2, random_state=42, stratify=df[cfg.outcome_column])
     predict_75, predict_25 = train_test_split(
     predict_df, 
-    test_size=0.25, 
+    test_size=0.50, 
     random_state=42, 
     stratify=predict_df[cfg.outcome_column]
     )

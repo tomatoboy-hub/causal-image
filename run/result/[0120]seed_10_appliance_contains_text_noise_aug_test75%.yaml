@@ -1,0 +1,600 @@
+exp1:
+  ATE: -0.3354302760831667
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+  treatment_column: T_proxy
+exp10:
+  ATE: -0.094644318649098
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1000
+  treatment_column: T_proxy
+exp11:
+  ATE: 0.15422531619005717
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2000
+  treatment_column: T_proxy
+exp12:
+  ATE: 0.22466672415102387
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 2000
+  treatment_column: T_proxy
+exp13:
+  ATE: 0.0022380839114370427
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3000
+  treatment_column: T_proxy
+exp14:
+  ATE: 0.005967810431517498
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 3000
+  treatment_column: T_proxy
+exp15:
+  ATE: 0.12343603329107782
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4000
+  treatment_column: T_proxy
+exp16:
+  ATE: 0.12258621658438056
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 4000
+  treatment_column: T_proxy
+exp17:
+  ATE: -0.4231647828289718
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 5000
+  treatment_column: T_proxy
+exp18:
+  ATE: -0.43111493818935837
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 5000
+  treatment_column: T_proxy
+exp19:
+  ATE: -0.1330810667878292
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 6000
+  treatment_column: T_proxy
+exp2:
+  ATE: -0.16034049131061043
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 42
+  treatment_column: T_proxy
+exp20:
+  ATE: -0.05334053264109368
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 6000
+  treatment_column: T_proxy
+exp21:
+  ATE: -0.08019539505432555
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp22:
+  ATE: 0.04389482579213423
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp23:
+  ATE: 0.11471000376576827
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp24:
+  ATE: 0.07339758730448682
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp25:
+  ATE: -0.19394551957771844
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp26:
+  ATE: -0.17858060452660343
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp27:
+  ATE: 0.015088663921420277
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp28:
+  ATE: -0.12616379447456985
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp29:
+  ATE: 0.03092196563955051
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp3:
+  ATE: -0.17312373538562256
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+  treatment_column: T_proxy
+exp30:
+  ATE: 0.0016879420524663344
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp31:
+  ATE: 0.47791719178116077
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp32:
+  ATE: 0.2417959486929579
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp33:
+  ATE: 0.06436294746913455
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp34:
+  ATE: 0.11643973992845999
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp35:
+  ATE: -0.3818359964234556
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp36:
+  ATE: -0.26549934951402
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp37:
+  ATE: -0.2718142280747368
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp38:
+  ATE: -0.2992317692695494
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp39:
+  ATE: 0.30523903531182517
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp4:
+  ATE: -0.020922708974468514
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 123
+  treatment_column: T_proxy
+exp40:
+  ATE: 0.09539199165405082
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp41:
+  ATE: -0.07185973036191058
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp42:
+  ATE: -0.12031750857292269
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 42
+  treatment_column: T_proxy
+exp43:
+  ATE: -0.18767638601678197
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp44:
+  ATE: -0.2889602440890075
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 123
+  treatment_column: T_proxy
+exp45:
+  ATE: -0.10286629916698696
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp46:
+  ATE: -0.299060545081975
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 456
+  treatment_column: T_proxy
+exp47:
+  ATE: -0.051932234116050024
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp48:
+  ATE: -0.16543236995910796
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 789
+  treatment_column: T_proxy
+exp49:
+  ATE: -0.3265650085925393
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp5:
+  ATE: -0.11343859271234465
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+  treatment_column: T_proxy
+exp50:
+  ATE: -0.17729898116511528
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 1000
+  treatment_column: T_proxy
+exp51:
+  ATE: -0.14487915512994415
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp52:
+  ATE: -0.28237064805502804
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 2000
+  treatment_column: T_proxy
+exp53:
+  ATE: -0.17231888787954075
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp54:
+  ATE: 0.05650604052123886
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 3000
+  treatment_column: T_proxy
+exp55:
+  ATE: -0.023794848646788474
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp56:
+  ATE: -0.07226479590100973
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 4000
+  treatment_column: T_proxy
+exp57:
+  ATE: -0.1346637500272496
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp58:
+  ATE: -0.212091561714246
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 5000
+  treatment_column: T_proxy
+exp59:
+  ATE: -0.016935406397628718
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp6:
+  ATE: -0.18361183884994145
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 456
+  treatment_column: T_proxy
+exp60:
+  ATE: -0.23160873140719443
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 6000
+  treatment_column: T_proxy
+exp7:
+  ATE: -0.30080811849850103
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+  treatment_column: T_proxy
+exp8:
+  ATE: -0.24903700063781736
+  ATE_adjusted: -0.18069178526894397
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 789
+  treatment_column: T_proxy
+exp9:
+  ATE: -0.14098456232935408
+  ATE_adjusted: -0.15083180533650348
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /content/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 1000
+  treatment_column: T_proxy

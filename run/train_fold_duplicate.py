@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/root/graduation_thetis/causal-bert-pytorch/')
+sys.path.append('/content/causal-image/')
 from src.modelmodule.modelmodule import ImageCausalModel
 import pandas as pd
 import numpy as np
@@ -17,7 +17,7 @@ from src.utils.common import ATE_unadjusted,ATE_adjusted
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
     set_seed(cfg.seed)
-    df = pd.read_csv(cfg.df_path)
+    df = pd.read_csv(cfg.df_path,encoding="Shift-JIS")
     kfold = KFold(n_splits=cfg.n_splits, shuffle=True, random_state=cfg.seed)
     wandb_logger = WandbLogger(project='causal_image',
                                name = f'{cfg.pretrained_model}-{cfg.batch_size}-{cfg.seed}', 

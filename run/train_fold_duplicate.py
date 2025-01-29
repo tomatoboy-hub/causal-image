@@ -23,14 +23,16 @@ def main(cfg:DictConfig):
                                name = f'{cfg.pretrained_model}-{cfg.batch_size}-{cfg.seed}', 
                                save_dir='logs')
     train, predict_df = train_test_split(df,test_size=0.2, random_state=42, stratify=df[cfg.outcome_column])
-    predict_75, predict_25 = train_test_split(
-    predict_df, 
-    test_size=0.25, 
-    random_state=42, 
-    stratify=predict_df[cfg.outcome_column]
-    )
-    # Step 2: train に predict_df の 75% を結合
-    train = pd.concat([train, predict_75], ignore_index=True)
+    
+    predict_df.to_csv(f"/root/graduation_thetis/causal-bert-pytorch/run/result/{cfg.confounds_column}-{cfg.exp_id}predict.csv", index=False)
+    # predict_75, predict_25 = train_test_split(
+    # predict_df, 
+    # test_size=0.25, 
+    # random_state=42, 
+    # stratify=predict_df[cfg.outcome_column]
+    # )
+    #Step 2: train に predict_df の 75% を結合
+    #train = pd.concat([train, predict_df], ignore_index=True)
     for fold, (train_indices, valid_indices) in enumerate(kfold.split(train)):
         print(f"Fold {fold + 1}/{cfg.n_splits}")
         train_df = train.iloc[train_indices]
@@ -60,8 +62,8 @@ def main(cfg:DictConfig):
     trainer.predict(model, dataloaders=data_module.predict_dataloader())
     ATE_value = model.ate_value
     print(ATE_value)
-    ate_unadj = ATE_unadjusted(predict_df[cfg.treatments_column], predict_df[cfg.outcome_column])
-    ate_adj = ATE_adjusted(predict_df[cfg.confounds_column],predict_df[cfg.treatments_column], predict_df[cfg.outcome_column])
+    ate_unadj = ATE_unadjusted(predict_df["T_proxy"], predict_df[cfg.outcome_column])
+    ate_adj = ATE_adjusted(predict_df[cfg.confounds_column],predict_df["light_or_dark"], predict_df[cfg.outcome_column])
     ate_unadj = float(ate_unadj)
     ate_adj = float(ate_adj)
     

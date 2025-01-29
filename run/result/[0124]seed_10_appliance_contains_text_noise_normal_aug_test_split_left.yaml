@@ -1,0 +1,600 @@
+exp1:
+  ATE: -0.03783459103613777
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 7000
+  treatment_column: T_proxy
+exp10:
+  ATE: -0.1080208819502425
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 200
+  treatment_column: T_proxy
+exp11:
+  ATE: -0.14876764258988187
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 300
+  treatment_column: T_proxy
+exp12:
+  ATE: -0.13643021857294757
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 300
+  treatment_column: T_proxy
+exp13:
+  ATE: -0.2716635537068631
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 400
+  treatment_column: T_proxy
+exp14:
+  ATE: -0.0840093333862527
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 400
+  treatment_column: T_proxy
+exp15:
+  ATE: -0.2054316614400333
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 500
+  treatment_column: T_proxy
+exp16:
+  ATE: -0.32161152859778713
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 500
+  treatment_column: T_proxy
+exp17:
+  ATE: -0.2765876724566492
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 600
+  treatment_column: T_proxy
+exp18:
+  ATE: -0.16532179968697683
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 600
+  treatment_column: T_proxy
+exp19:
+  ATE: -0.10300863935786414
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 700
+  treatment_column: T_proxy
+exp2:
+  ATE: -0.05316955860183242
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 7000
+  treatment_column: T_proxy
+exp20:
+  ATE: -0.15495963326793058
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 700
+  treatment_column: T_proxy
+exp21:
+  ATE: -0.19915008076939308
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 7000
+  treatment_column: T_proxy
+exp22:
+  ATE: -0.18186401145739386
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 7000
+  treatment_column: T_proxy
+exp23:
+  ATE: -0.30423299309849183
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 8000
+  treatment_column: T_proxy
+exp24:
+  ATE: -0.4195471215342552
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 8000
+  treatment_column: T_proxy
+exp25:
+  ATE: -0.16244830499809262
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 9000
+  treatment_column: T_proxy
+exp26:
+  ATE: -0.052718389247495785
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 9000
+  treatment_column: T_proxy
+exp27:
+  ATE: -0.3476283753278769
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 100
+  treatment_column: T_proxy
+exp28:
+  ATE: -0.37824086800966716
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 100
+  treatment_column: T_proxy
+exp29:
+  ATE: 0.1790102161592652
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 200
+  treatment_column: T_proxy
+exp3:
+  ATE: 0.07788651504905678
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 8000
+  treatment_column: T_proxy
+exp30:
+  ATE: 0.1794402421402869
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 200
+  treatment_column: T_proxy
+exp31:
+  ATE: -0.009349161598516129
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 300
+  treatment_column: T_proxy
+exp32:
+  ATE: 0.03684149964989952
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 300
+  treatment_column: T_proxy
+exp33:
+  ATE: 0.2120716732312121
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 400
+  treatment_column: T_proxy
+exp34:
+  ATE: 0.21463151903624111
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 400
+  treatment_column: T_proxy
+exp35:
+  ATE: -0.3641964527640881
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 500
+  treatment_column: T_proxy
+exp36:
+  ATE: -0.4097364635603724
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 500
+  treatment_column: T_proxy
+exp37:
+  ATE: -0.045309652509785484
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 600
+  treatment_column: T_proxy
+exp38:
+  ATE: 0.006373256936948585
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 600
+  treatment_column: T_proxy
+exp39:
+  ATE: 0.10282828263098562
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 700
+  treatment_column: T_proxy
+exp4:
+  ATE: 0.08799950105467927
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 8000
+  treatment_column: T_proxy
+exp40:
+  ATE: 0.1317122722506061
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/efficientvit_m2.r224_in1k
+  seed: 700
+  treatment_column: T_proxy
+exp41:
+  ATE: -0.13602736237190918
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 7000
+  treatment_column: T_proxy
+exp42:
+  ATE: -0.09686751765549423
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 7000
+  treatment_column: T_proxy
+exp43:
+  ATE: -0.11663808820148934
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 8000
+  treatment_column: T_proxy
+exp44:
+  ATE: -0.1785174872925771
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 8000
+  treatment_column: T_proxy
+exp45:
+  ATE: -0.08508973498401229
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 9000
+  treatment_column: T_proxy
+exp46:
+  ATE: -0.2900834369794648
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 9000
+  treatment_column: T_proxy
+exp47:
+  ATE: -0.1471749510113862
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 100
+  treatment_column: T_proxy
+exp48:
+  ATE: -0.11222099638740782
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 100
+  treatment_column: T_proxy
+exp49:
+  ATE: -0.2340172817630757
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 200
+  treatment_column: T_proxy
+exp5:
+  ATE: -0.4085812509160159
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 9000
+  treatment_column: T_proxy
+exp50:
+  ATE: -0.12798218325947427
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 200
+  treatment_column: T_proxy
+exp51:
+  ATE: -0.30366186031460823
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 300
+  treatment_column: T_proxy
+exp52:
+  ATE: -0.05150192605867472
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 300
+  treatment_column: T_proxy
+exp53:
+  ATE: -0.24739771052549445
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 400
+  treatment_column: T_proxy
+exp54:
+  ATE: -0.013612651785224736
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 400
+  treatment_column: T_proxy
+exp55:
+  ATE: -0.07569968419775397
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 500
+  treatment_column: T_proxy
+exp56:
+  ATE: -0.14992351008343024
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 500
+  treatment_column: T_proxy
+exp57:
+  ATE: -0.1078169645815132
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 600
+  treatment_column: T_proxy
+exp58:
+  ATE: -0.22178760094320313
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 600
+  treatment_column: T_proxy
+exp59:
+  ATE: -0.13104440224735475
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 700
+  treatment_column: T_proxy
+exp6:
+  ATE: -0.2187097643554057
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 9000
+  treatment_column: T_proxy
+exp60:
+  ATE: -0.19012418764201133
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/vit_base_patch32_clip_224.laion2b_ft_in12k_in1k
+  seed: 700
+  treatment_column: T_proxy
+exp7:
+  ATE: -0.16053937559544953
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 100
+  treatment_column: T_proxy
+exp8:
+  ATE: -0.01996834215420435
+  ATE_adjusted: -0.24018500505914686
+  ATE_unadjusted: -0.1782289108648039
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 100
+  treatment_column: T_proxy
+exp9:
+  ATE: -0.05037040743038482
+  ATE_adjusted: -0.16896163741082543
+  ATE_unadjusted: -0.17242323651452285
+  batch_size: 32
+  desc: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv
+  epochs: 3
+  model_name: timm/eva02_tiny_patch14_224.mim_in22k
+  seed: 200
+  treatment_column: T_proxy

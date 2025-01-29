@@ -42,7 +42,7 @@ def main(cfg:DictConfig):
             logger = wandb_logger,
             max_epochs=cfg.epoch,
             accelerator='gpu' if torch.cuda.is_available() else 'cpu',
-            log_every_n_steps=cfg.total_training_steps // cfg.batch_size
+            losg_every_n_steps=cfg.total_training_steps // cfg.batch_size
         )
         trainer.fit(model, train_dataloaders=data_module.train_dataloader(), val_dataloaders=data_module.valid_dataloader())
     

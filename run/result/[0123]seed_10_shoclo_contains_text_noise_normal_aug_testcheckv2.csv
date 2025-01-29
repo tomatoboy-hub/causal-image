@@ -1,0 +1,4 @@
+exp_name,seed,model_name,batch_size,epochs,ATE,desc,treatment_column,confounds_column,ATE_unadjusted,ATE_adjusted
+exp1,42,timm/eva02_tiny_patch14_224.mim_in22k,32,3,-0.19427520021162853,/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv,T_proxy,contains_text,-0.17242323651452285,-0.15083180533650348
+exp2,42,timm/eva02_tiny_patch14_224.mim_in22k,32,3,-0.16891288930452775,/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c10_noise0.5_1221-T_boost.csv,T_proxy,contains_text,-0.1782289108648039,-0.18069178526894397
+exp3,123,timm/eva02_tiny_patch14_224.mim_in22k,32,3,-0.16087631032927716,/root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliances_preprocess_contains_text_t0.8c0.8_noise0.5_1221-T_boost.csv,T_proxy,contains_text,-0.17242323651452285,-0.15083180533650348

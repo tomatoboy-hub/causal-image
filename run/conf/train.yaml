@@ -13,14 +13,14 @@ sampler: weighted
 n_splits: 5
 
 df_path: /root/graduation_thetis/causal-bert-pytorch/input/modelinput/noise-T-boost/Appliance_preprocess_sharpness_ave_t0.8c10_noise0.5_1221-T_boost.csv
-image_column: "file_path"
+image_column: "img_path"
 confounds_column: "contains_text"
-treatments_column: "T_plus_reg"
+treatments_column: "T_proxy"
 outcome_column: "outcome"
-file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0126]seed_10_shoclo_sharpness_ave_noise_aug_test_split_Treg.yaml
-file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0126]seed_10_shoclo_contains_text_noise_normal_aug_test_split_Treg.yaml
-csv_path_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0126]seed_10_shoclo_sharpness_ave_noise_normal_aug_test_split_Treg.csv
-csv_path_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0126]seed_10_shoclo_contains_text_noise_normal_aug_test_split_Treg.csv
+file_name_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0203]seed_20_appliance_sharpness_ave_noise_aug_noconfound.yaml
+file_name_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0203]seed_20_appliance_contains_text_noise_normal_aug_noconfound.yaml
+csv_path_T: /root/graduation_thetis/causal-bert-pytorch/run/result/[0203]seed_20_appliance_sharpness_ave_noise_normal_aug_noconfound.csv
+csv_path_C: /root/graduation_thetis/causal-bert-pytorch/run/result/[0203]seed_20_appliance_contains_text_noise_normal_aug_noconfound.csv
 description: "appliance,con:??, treat:?? , confound: ?? ,noise:Yes,aug"
 
 

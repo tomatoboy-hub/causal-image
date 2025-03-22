@@ -150,7 +150,7 @@ class CausalImageDataset(Dataset):
         return image, confounds, treatment, outcome
 """
 
-
+"""
 class CausalImageDataModule(LightningDataModule):
     def __init__(self,cfg:DictConfig,df):
         super().__init__()
@@ -204,6 +204,7 @@ class CausalImageDataModule(LightningDataModule):
         )
         return predict_loader
 """
+
 class CausalImageDataModule(LightningDataModule):
     def __init__(self,cfg:DictConfig,df):
         super().__init__()
@@ -230,7 +231,7 @@ class CausalImageDataModule(LightningDataModule):
             num_workers = self.cfg.num_workers
         )
         return train_loader
-    
+    """
     def val_dataloader(self):
         valid_loader = DataLoader(
             self.valid_dataset,
@@ -239,6 +240,7 @@ class CausalImageDataModule(LightningDataModule):
             num_workers = self.cfg.num_workers
         )
         return valid_loader
+    """
     def predict_dataloader(self):
         sampler = SequentialSampler(self.train_dataset)
         predict_loader = DataLoader(
@@ -248,4 +250,3 @@ class CausalImageDataModule(LightningDataModule):
             num_workers= self.cfg.num_workers
         )
         return predict_loader
-"""

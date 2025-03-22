@@ -37,15 +37,16 @@ class ImageCausalModel(LightningModule):
 
         self.Q_cls = nn.ModuleDict()
 
-        input_size = self.base_model.num_features + self.cfg.num_labels
-
+        #input_size = self.base_model.num_features + self.cfg.num_labels
+        input_size = self.base_model.num_features
         for T in range(2):
             self.Q_cls['%d' % T] = nn.Sequential(
                 nn.Linear(input_size, 200),
                 nn.ReLU(),
                 nn.Linear(200, self.cfg.num_labels)
             )
-        self.g_cls = nn.Linear(self.base_model.num_features + self.cfg.num_labels, self.cfg.num_labels)
+        #self.g_cls = nn.Linear(self.base_model.num_features + self.cfg.num_labels, self.cfg.num_labels)
+        self.g_cls = nn.Linear(input_size, self.cfg.num_labels)
         self.init_weights()
         self.Q0s = []
         self.Q1s = []
@@ -178,7 +179,8 @@ class ImageCausalModel(LightningModule):
             masking_loss = 0.0
     
         C = self._make_confound_vector(confounds.unsqueeze(1), self.cfg.num_labels)
-        inputs = torch.cat((features, C), dim = 1)
+        #inputs = torch.cat((features, C), dim = 1)
+        inputs = features
         g = self.g_cls(inputs)
         if torch.all(treatment != -1):
             g_loss = CrossEntropyLoss()(g.view(-1, self.cfg.num_labels),treatment.view(-1))

@@ -11,6 +11,7 @@ from omegaconf import DictConfig
 from pytorch_lightning.loggers import WandbLogger
 from src.utils.common import set_seed, save_experiment_result,save_experiment_result_to_csv
 from sklearn.model_selection import train_test_split
+from src.utils.common import ATE_unadjusted,ATE_adjusted      
 
 @hydra.main(config_path = "conf", config_name = "train", version_base = '1.3')
 def main(cfg:DictConfig):
@@ -59,11 +60,21 @@ def main(cfg:DictConfig):
 
     trainer.predict(model, dataloaders=data_module.predict_dataloader())
     ATE_value = model.ate_value
-
     print(ATE_value)
+    ate_unadj = ATE_unadjusted(df["T_proxy"], df[cfg.outcome_column])
+    ate_adj = ATE_adjusted(df[cfg.confounds_column],df["light_or_dark"], df[cfg.outcome_column])
+    ate_unadj = float(ate_unadj)
+    ate_adj = float(ate_adj)
+    
+    if cfg.confounds_column == "sharpness_ave":
+        file_path = cfg.file_name_T
+        csv_path = cfg.csv_path_T
+    elif cfg.confounds_column == "contains_text":
+        file_path = cfg.file_name_C
+        csv_path = cfg.csv_path_C
 
     save_experiment_result(
-        file_path=cfg.file_name,
+        file_path=file_path,
         exp_name=f'exp{cfg.exp_id}',
         model_name=cfg.pretrained_model,
         batch_size=cfg.batch_size,
@@ -71,9 +82,25 @@ def main(cfg:DictConfig):
         seed=cfg.seed,
         ATE=float(ATE_value),
         desc=cfg.df_path,
-        treatment_column=cfg.treatments_column
+        treatment_column=cfg.treatments_column,
+        ATE_unadj=ate_unadj,
+        ATE_adj=ate_adj
     )
 
+    save_experiment_result_to_csv(
+        file_path=csv_path,
+        exp_name=f'exp{cfg.exp_id}',
+        model_name=cfg.pretrained_model,
+        batch_size=cfg.batch_size,
+        epochs=cfg.epoch,
+        seed=cfg.seed,
+        ATE=float(ATE_value),
+        desc=cfg.df_path,
+        treatment_column=cfg.treatments_column,
+        confounds_column=cfg.confounds_column,
+        ATE_unadj=ate_unadj,
+        ATE_adj=ate_adj
+    )
 
 
 
